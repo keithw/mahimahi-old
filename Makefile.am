@@ -55,7 +55,7 @@ http_server_source = http_proxy.hh http_proxy.cc \
 
 bin_PROGRAMS += recordshell
 recordshell_SOURCES = $(common_source) $(http_source) $(http_server_source) recordshell.cc
-recordshell_LDADD = protobufs/libhttprecordprotos.a -lrt $(protobuf_LIBS) $(libssl_LIBS)
+recordshell_LDADD = protobufs/libhttprecordprotos.a -lrt $(protobuf_LIBS) $(libcrypto_LIBS) $(libssl_LIBS)
 recordshell_LDFLAGS = -pthread
 
 bin_PROGRAMS += replayshell
