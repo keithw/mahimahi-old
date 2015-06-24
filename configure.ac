@@ -85,6 +85,7 @@ if test "${prefix}" = "NONE"; then
     prefix=$ac_default_prefix
 fi
 AC_DEFINE_UNQUOTED([REPLAYSERVER], ["${prefix}/bin/mm-replayserver"], [path to mm-replayserver])
+AC_DEFINE_UNQUOTED([YOUTUBESERVER], ["${prefix}/bin/mm-youtubeserver"], [path to nph-youtubeserver.cgi])
 
 AC_DEFINE_UNQUOTED([MOD_DEEPCGI], ["${prefix}/lib/${DEB_HOST_MULTIARCH}/libmod_deepcgi.so"], [path to apache2 mod_deepcgi])
 

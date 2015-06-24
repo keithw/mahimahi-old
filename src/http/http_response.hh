@@ -8,6 +8,7 @@
 #include "http_message.hh"
 #include "body_parser.hh"
 #include "http_request.hh"
+#include "file_descriptor.hh"
 
 class HTTPResponse : public HTTPMessage
 {

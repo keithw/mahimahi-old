@@ -151,6 +151,22 @@ const string & HTTPMessage::get_header_value( const std::string & header_name ) 
     throw runtime_error( "HTTPMessage header not found: " + header_name );
 }
 
+std::vector< HTTPHeader > & HTTPMessage::headers() {
+    return headers_;
+}
+
+void HTTPMessage::add_or_replace_header( HTTPHeader header) {
+    assert( state_ == HEADERS_PENDING );
+    for(std::vector< HTTPHeader >::size_type i = 0; i != headers_.size(); i++) {
+        if(headers_[i].key() == header.key()){
+            headers_[i] = header;
+            return;
+        }
+    }
+    headers_.emplace_back( header );
+    return;
+}
+
 /* serialize the request or response as one string */
 std::string HTTPMessage::str( void ) const
 {
@@ -171,6 +187,10 @@ std::string HTTPMessage::str( void ) const
     ret.append( body_ );
 
     return ret;
+}
+
+const std::string & HTTPMessage::get_first_line( void ) const {
+    return first_line_;
 }
 
 MahimahiProtobufs::HTTPMessage HTTPMessage::toprotobuf( void ) const

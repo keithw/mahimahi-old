@@ -4,6 +4,6 @@
 
 int main( int argc, char *argv[] )
 {
-    CommonReplayShell replay_runner = CommonReplayShell(false);
+    CommonReplayShell replay_runner = CommonReplayShell(true);
     return replay_runner.run_replay_shell(argc, argv);
 }

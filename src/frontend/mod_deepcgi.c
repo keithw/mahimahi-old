@@ -4,14 +4,13 @@
 #include "http_core.h"
 #include "http_protocol.h"
 
-extern const char* replayserver_filename;
-
 static void deepcgi_hooks( apr_pool_t* inpPool );
 static int deepcgi_handler( request_rec* inpRequest );
 
 typedef struct {
     const char* working_dir;
     const char* recording_dir;
+    const char* binary_name;
 } deepcgi_config;
 
 static deepcgi_config config;
@@ -30,6 +29,11 @@ const char* deepcgi_set_recordingdir(cmd_parms* cmd, void* cfg, const char* arg)
     return NULL;
 }
 
+const char* deepcgi_set_binaryname(cmd_parms* cmd, void* cfg, const char* arg) {
+    config.binary_name = arg;
+    return NULL;
+}
+
 // ============================================================================
 // Directives to read configuration parameters
 // ============================================================================
@@ -38,6 +42,7 @@ static const command_rec deepcgi_directives[] =
 {
     AP_INIT_TAKE1( "workingDir", deepcgi_set_workingdir, NULL, RSRC_CONF, "Working directory" ),
     AP_INIT_TAKE1( "recordingDir", deepcgi_set_recordingdir, NULL, RSRC_CONF, "Recording directory" ),
+    AP_INIT_TAKE1( "binaryName", deepcgi_set_binaryname, NULL, RSRC_CONF, "Binary name" ),
     { NULL }
 };
 
@@ -83,7 +88,7 @@ int deepcgi_handler( request_rec* inpRequest )
         setenv( "HTTP_USER_AGENT", user_agent, TRUE );
     }
 
-    FILE* fp = popen( replayserver_filename, "r" );
+    FILE* fp = popen( config.binary_name, "r" );
     if ( fp == NULL ) {
         // "Error encountered while running script"
         return HTTP_INTERNAL_SERVER_ERROR;
