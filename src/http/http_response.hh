@@ -8,6 +8,7 @@
 #include "http_message.hh"
 #include "body_parser.hh"
 #include "http_request.hh"
+#include "file_descriptor.hh"
 
 class HTTPResponse : public HTTPMessage
 {
@@ -17,13 +18,15 @@ private:
     HTTPRequest request_ {};
 
     /* required methods */
-    void calculate_expected_body_size( void ) override;
+   
     size_t read_in_complex_body( const std::string & str ) override;
     bool eof_in_body( void ) const override;
 
     std::unique_ptr< BodyParser > body_parser_ { nullptr };
 
 public:
+     void calculate_expected_body_size( void ) override;
+     void calculate_expected_body_size_logfile( FileDescriptor & logfile );
     void set_request( const HTTPRequest & request );
     const HTTPRequest & request( void ) const { return request_; }
 

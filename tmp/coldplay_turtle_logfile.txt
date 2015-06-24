@@ -1,0 +1,769 @@
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@50k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@70k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmaudio@128k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@160k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@160k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm144p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm360p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm360p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm144p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm360p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm360p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@50k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@70k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmaudio@128k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@160k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@160k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm144p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm360p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm360p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@50k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@70k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmaudio@128k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@160k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@160k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm144p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm360p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm360p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm144p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm360p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm360p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@50k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@70k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmaudio@128k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@160k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@160k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm144p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm360p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm360p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@50k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@70k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmaudio@128k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@160k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@160k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@50k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@70k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmaudio@128k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@160k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@160k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm144p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm144p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@50k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@70k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@70k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm144p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm144p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@50k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@70k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@70k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm144p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm144p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm144p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm360p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm240p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm240p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@50k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@70k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmaudio@128k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@160k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@160k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@50k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@70k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmaudio@128k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@160k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@160k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm144p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm360p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm240p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm240p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm144p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm360p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm240p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm240p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm144p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm360p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm240p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm240p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@50k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@70k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmaudio@128k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@160k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@160k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@50k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@70k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmaudio@128k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@160k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@160k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm144p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm360p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm360p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm144p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm360p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm360p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm144p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm360p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm360p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm144p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm360p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm360p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm144p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@50k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm360p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@70k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm360p
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmaudio@128k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@160k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@160k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm144p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm360p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm360p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@50k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@70k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmaudio@128k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@160k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@160k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm144p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm360p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm360p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm144p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm144p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@50k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@70k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@70k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm144p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm144p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@50k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@70k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@70k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm144p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm144p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm144p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm360p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm240p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm240p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@50k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@70k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmaudio@128k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@160k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@160k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@50k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@70k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmaudio@128k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@160k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/audio/webm/coldplay_turtle_audio_webmopus@160k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm144p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm360p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm240p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm240p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm144p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm360p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm240p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm240p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm144p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm360p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm240p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/coldplay_turtle_media_files/video/webm/coldplay_turtle_video_webm240p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@256k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@256k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@256k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@256k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@256k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@256k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4480p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4480p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4480p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4480p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4480p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4144p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4144p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@256k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4480p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4144p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4144p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@256k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4480p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4144p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4144p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@256k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4480p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4144p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4144p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@256k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4480p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4144p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4144p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4480p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4144p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4144p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@256k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4480p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4144p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4240p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4240p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@256k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@256k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4480p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4144p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4240p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4240p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4480p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4144p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4240p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4240p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@256k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4480p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4144p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4240p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4240p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4480p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4144p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4240p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4240p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@256k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4480p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4144p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4240p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4240p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@256k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4480p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4144p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4240p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4240p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@256k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4480p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4144p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4240p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4240p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@256k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@256k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@256k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@256k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@256k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@256k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@256k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4480p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4480p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4480p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4480p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4480p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4480p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@256k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@256k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4480p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4480p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@256k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4480p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4480p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@256k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4480p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4480p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@256k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4480p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4480p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4360p
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4480p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4480p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@256k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@256k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@256k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@256k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@256k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@256k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@256k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@256k
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/audio/mp4/the_shot_trey_burke_m4aaac@128k
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Looking in directory /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/
+
+Looking at file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p
+Found file /home/sbdhayes/Mahimahi/mahimahi/media_files/the_shot_trey_burke_media_files/video/mp4/the_shot_trey_burke_video_mp4720p

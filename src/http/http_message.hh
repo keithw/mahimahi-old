@@ -54,6 +54,7 @@ public:
     /* methods called by an external parser */
     void set_first_line( const std::string & str );
     void add_header( const std::string & str );
+    void add_or_replace_header( HTTPHeader header);
     void done_with_headers( void );
     size_t read_in_body( const std::string & str );
     void eof( void );
@@ -67,6 +68,7 @@ public:
     /* troll through the headers */
     bool has_header( const std::string & header_name ) const;
     const std::string & get_header_value( const std::string & header_name ) const;
+    std::vector< HTTPHeader > get_headers();
 
     /* serialize the request or response as one string */
     std::string str( void ) const;
@@ -77,6 +79,8 @@ public:
     /* compare two strings for (case-insensitive) equality,
        in ASCII without sensitivity to locale */
     static bool equivalent_strings( const std::string & a, const std::string & b );
+
+    const std::string & get_first_line( void ) const; 
 
     /* construct from protobuf */
     HTTPMessage( const MahimahiProtobufs::HTTPMessage & proto );
