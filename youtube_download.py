@@ -2,6 +2,10 @@
 
 # This script downloads video from youtube for the youtube emulation server
 
+# It is meant to be run by youtube_record.py, not by the user. 
+
+# USAGE: python youtube_download.py youtube_url
+
 import sys
 import subprocess
 import re

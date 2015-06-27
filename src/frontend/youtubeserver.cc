@@ -164,7 +164,9 @@ int main( void )
         //The request line contains the command and url. Youtube media requests for audio and video contain GET /videoplayback? in the request line. 
         if(is_youtube_media_request(request_line) && best_score > 0) {
             // Log the request meta data to the logfile. The logfile is available currently as a debugging tool only. 
-            FileDescriptor logfile( SystemCall( "open", open("./tmp/the_shot_trey_burke_logfile.txt", O_WRONLY | O_APPEND | O_CREAT, S_IRUSR | S_IWUSR)));
+            string video_id = "test";
+            string logfilename = "./youtube_logs/" + video_id + ".txt";
+            FileDescriptor logfile( SystemCall( "open", open(logfilename.c_str(), O_WRONLY | O_APPEND | O_CREAT, S_IRUSR | S_IWUSR)));
            
 
             // For YouTube media requests the range of bytes from a media file is expressed in the range parameter. 
@@ -190,7 +192,7 @@ int main( void )
            
 
             //Once we know the file size, the media format, and the range of bytes, we search locally for the correct file. Currently, the media directory is hard coded. 
-            string requested_file_directory = working_directory + "/media_files/the_shot_trey_burke_media_files/" + mime_str + "/";
+            string requested_file_directory = working_directory + "/media_files/" + video_id + "/" + mime_str + "/";
             vector<string> filenames; 
             string requested_filename = "";
             bool found_matching_file = false; 
