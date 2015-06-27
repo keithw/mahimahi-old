@@ -123,7 +123,7 @@ int main( int argc, char *argv[] )
         /* set up web servers */
         vector< WebServer > servers;
         for ( const auto ip_port : unique_ip_and_port ) {
-            servers.emplace_back( ip_port, working_directory, directory , false);
+            servers.emplace_back( ip_port, working_directory, directory, true );
         }
 
         /* set up DNS server */

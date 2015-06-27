@@ -13,10 +13,13 @@
 
 using namespace std;
 
-WebServer::WebServer( const Address & addr, const string & working_directory, const string & record_path )
+WebServer::WebServer( const Address & addr, const string & working_directory, const string & record_path , bool isYoutubeServer)
     : config_file_( "/tmp/replayshell_apache_config" ),
       moved_away_( false )
 {
+    if(isYoutubeServer) {
+        switch_to_youtube_server(); 
+    }
     config_file_.write( apache_main_config );
 
     config_file_.write( "SetEnv MAHIMAHI_CHDIR " + working_directory + "\n" );
