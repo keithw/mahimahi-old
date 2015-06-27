@@ -162,11 +162,7 @@ int main( void )
             FileDescriptor logfile( SystemCall( "open", open("./tmp/the_shot_trey_burke_logfile.txt", O_WRONLY | O_APPEND | O_CREAT, S_IRUSR | S_IWUSR)));
             const string scheme = is_https? "https" : "http";
             const string host = safe_getenv("HTTP_HOST");
-            //logfile.write("\n\n############################################################## \n");
-            //logfile.write("\n\nRequest: \n");
-            //logfile.write("Query: " + safe_getenv("REQUEST_METHOD") + " " + scheme + "://" + host + safe_getenv("REQUEST_URI") + "" + safe_getenv("SERVER_PROTOCOL") + "\n\n");
-
-            // For YouTube media requests the byte range of video requests is expressed as a uri parameter. For example: &range=65536-131071
+            
             size_t range_start = request_line.find( "&range=" );
             size_t range_mid   = request_line.find( '-', range_start );
             size_t range_end   = request_line.find( '&', range_mid );
@@ -177,18 +173,6 @@ int main( void )
             off_t chunk_offset = atoll( request_line.substr( range_start + 7, range_mid - (range_start + 7) ).c_str() );
             off_t chunk_last   = atoll( request_line.substr( range_mid   + 1, range_end - (range_mid   + 1) ).c_str() );
             off_t chunk_len = chunk_last - chunk_offset + 1;
-
-            stringstream range_start_ss; 
-            range_start_ss << chunk_offset; 
-            string range_start_str = range_start_ss.str(); 
-
-            stringstream range_end_ss; 
-            range_end_ss << chunk_last; 
-            string range_end_str = range_end_ss.str(); 
-
-            stringstream range_length_ss; 
-            range_length_ss << chunk_len; 
-            string range_length_str = range_length_ss.str(); 
 
 
             // For YouTube media requests the requested media file size is expressed as a uri parameter. 
@@ -204,21 +188,11 @@ int main( void )
             size_t slash_position = mime_str.find("%2F");
             mime_str.replace(slash_position, string("%2F").length(), "/");
 
-
-            //logfile.write("File Size: " + clen_str + "\n");
-            //logfile.write("Range Start: " + range_start_str + " Range End: " + range_end_str + " Range Length " + range_length_str + "\n");
-            //logfile.write("File Format: " + mime_str + "\n");
-          
-
-           
-
             string requested_file_directory = working_directory + "/media_files/the_shot_trey_burke_media_files/" + mime_str + "/";
-            logfile.write("Looking in directory " + requested_file_directory + "\n");
             vector<string> filenames; 
             string requested_filename = "";
             filenames = list_directory_contents( requested_file_directory );
             for( auto & filename : filenames ) {
-                logfile.write("\nLooking at file " + filename);
                 struct stat fileinfo; 
                 SystemCall( "stat", stat( filename.c_str(), &fileinfo ));
                 if(clen == fileinfo.st_size) {
@@ -230,12 +204,10 @@ int main( void )
             if( requested_filename == "" ) {
                 throw runtime_error( "could not find a file with format " + mime_str + " and size " + clen_str + " on the YouTube server");
             }
-
-            logfile.write("\nFound file " + requested_filename + "\n");
           
 
             HTTPResponse response = HTTPResponse(); 
-            //logfile.write("\nResponse: \n");
+        
 
             HTTPRequest request = HTTPRequest();
             request.set_first_line( request_line );
@@ -258,17 +230,8 @@ int main( void )
             }
          
 
-            response.add_or_replace_header( HTTPHeader("Content-Length:" + range_length_str));
+            response.add_or_replace_header( HTTPHeader("Content-Length:" + to_string(chunk_len)));
             response.add_or_replace_header( HTTPHeader("Content-Type:" + mime_str));
-
-            for( const auto & header : response.get_headers()) {
-                //logfile.write(header.key() + ":" + header.value() + "\n");
-            }
-
-            //response.calculate_expected_body_size_logfile(logfile);
-            
-
-            //size_t expected_body_size = response.expected_body_size(); 
            
             response.done_with_headers(); 
         
@@ -285,8 +248,6 @@ int main( void )
             response.read_in_body( body_stream.str() ); //Set the content of the response to the data chunk from the media file
 
             delete[] buf;
-
-            //logfile.write(response.str() + "\n");
 
             cout << response.str();
 

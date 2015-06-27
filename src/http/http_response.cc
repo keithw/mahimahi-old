@@ -65,56 +65,6 @@ void HTTPResponse::calculate_expected_body_size( void )
     }
 }
 
-void HTTPResponse::calculate_expected_body_size_logfile( FileDescriptor & logfile )
-{
-     state_ = BODY_PENDING;
-    assert( state_ == BODY_PENDING );
-    /* implement rules of RFC 2616 section 4.4 ("Message Length") */
-
-     logfile.write(status_code() + "\n"); 
-
-    if ( status_code().at( 0 ) == '1'
-         or status_code() == "204"
-         or status_code() == "304"
-         or request_.is_head() ) {
-    logfile.write("AA\n");
-        /* Rule 1: size known to be zero */
-        set_expected_body_size( true, 0 );
-
-       
-    } else if ( has_header( "Transfer-Encoding" )
-                and equivalent_strings( split( get_header_value( "Transfer-Encoding" ), "," ).back(),
-                                        "chunked" ) ) {
- logfile.write("BB\n");
-        /* Rule 2: size dictated by chunked encoding */
-        /* Rule 2 is a bit ambiguous, but we think section 3.6 makes this acceptable */
-
-        set_expected_body_size( false );
-
-        /* Create body_parser_ with trailers_enabled if requied (RFC 2616 section 14.40) */
-        body_parser_ = unique_ptr< BodyParser >( new ChunkedBodyParser( has_header( "Trailer" ) ) );
-        
-    } else if ( (not has_header( "Transfer-Encoding" ) )
-                and has_header( "Content-Length" ) ) {
-logfile.write("CC\n");
-        /* Rule 3: content-length header present to specify size */
-        set_expected_body_size( true, myatoi( get_header_value( "Content-Length" ) ) );
-    } else if ( has_header( "Content-Type" )
-                and equivalent_strings( MIMEType( get_header_value( "Content-Type" ) ).type(),
-                                        "multipart/byteranges" ) ) {
-logfile.write("DD\n");
-        /* Rule 4 */
-        set_expected_body_size( false );
-        throw runtime_error( "HTTPResponse: unsupported multipart/byteranges without Content-Length" );
-    } else {
-        logfile.write("EE\n");
-        /* Rule 5 */
-        set_expected_body_size( false );
-
-        body_parser_ = unique_ptr< BodyParser >( new Rule5BodyParser() );
-    }
-}
-
 size_t HTTPResponse::read_in_complex_body( const std::string & str )
 {
     assert( state_ == BODY_PENDING );
