@@ -191,17 +191,19 @@ int main( void )
             string requested_file_directory = working_directory + "/media_files/the_shot_trey_burke_media_files/" + mime_str + "/";
             vector<string> filenames; 
             string requested_filename = "";
+            bool found_matching_file = false; 
             filenames = list_directory_contents( requested_file_directory );
             for( auto & filename : filenames ) {
                 struct stat fileinfo; 
                 SystemCall( "stat", stat( filename.c_str(), &fileinfo ));
                 if(clen == fileinfo.st_size) {
                     requested_filename = filename;
+                    found_matching_file = true; 
                     break;
                 }
             }
 
-            if( requested_filename == "" ) {
+            if( !found_matching_file ) {
                 throw runtime_error( "could not find a file with format " + mime_str + " and size " + clen_str + " on the YouTube server");
             }
           
