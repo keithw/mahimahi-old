@@ -151,7 +151,7 @@ const string & HTTPMessage::get_header_value( const std::string & header_name ) 
     throw runtime_error( "HTTPMessage header not found: " + header_name );
 }
 
-std::vector< HTTPHeader > HTTPMessage::get_headers() {
+std::vector< HTTPHeader > & HTTPMessage::headers() {
     return headers_;
 }
 

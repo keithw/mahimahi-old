@@ -109,16 +109,21 @@ bool is_youtube_media_request( const string & first_line ) {
     return first_line.find( "GET /videoplayback?" ) == 0;
 }
 
-//This will return the string representation of a parameter value within the uri. 
+//This will return the string representation of a parameter value within the url. 
 //For example to get the 'clen' parameter, you can call get_param("clen", request_line)
-string get_param(string parameter_name, string uri) {
+string get_param(string parameter_name, string url) {
     string formatted_parameter = "&" + parameter_name + "=";
-    size_t start_position = uri.find( formatted_parameter );
+    size_t start_position = url.find( formatted_parameter );
     if( start_position == string::npos ) {
-        throw runtime_error( "no valid " + parameter_name + " parameter found in the YouTube video-playback request uri" );
+        throw runtime_error( "no valid " + parameter_name + " parameter found in the YouTube video-playback request url" );
     }
     size_t formatted_parameter_length = formatted_parameter.length();
-    string parameter_value_string = uri.substr( start_position + formatted_parameter_length, uri.find( '&', start_position + formatted_parameter_length ) - (start_position + formatted_parameter_length) );
+    size_t parameter_value_end_pos = url.find( '&', start_position + formatted_parameter_length ); 
+    if( parameter_value_end_pos == string::npos) {
+        parameter_value_end_pos = url.find( ' ', start_position + formatted_parameter_length ); 
+    }
+    size_t parameter_value_string_length = parameter_value_end_pos - (start_position + formatted_parameter_length);
+    string parameter_value_string = url.substr( start_position + formatted_parameter_length, parameter_value_string_length);
     return parameter_value_string;
 }
 
@@ -156,38 +161,35 @@ int main( void )
             }
         }
 
-        //The request line contains the command and uri. Youtube media requests for audio and video contain GET /videoplayback? in the request line. 
+        //The request line contains the command and url. Youtube media requests for audio and video contain GET /videoplayback? in the request line. 
         if(is_youtube_media_request(request_line) && best_score > 0) {
-            /* Log the request meta data to the logfile */
+            // Log the request meta data to the logfile. The logfile is available currently as a debugging tool only. 
             FileDescriptor logfile( SystemCall( "open", open("./tmp/the_shot_trey_burke_logfile.txt", O_WRONLY | O_APPEND | O_CREAT, S_IRUSR | S_IWUSR)));
-            const string scheme = is_https? "https" : "http";
-            const string host = safe_getenv("HTTP_HOST");
-            
-            size_t range_start = request_line.find( "&range=" );
-            size_t range_mid   = request_line.find( '-', range_start );
-            size_t range_end   = request_line.find( '&', range_mid );
-            if( range_start == string::npos || range_mid == string::npos ) {
-                throw runtime_error( "no valid range parameter found in the YouTube video-playback request uri" );
-            }
+           
 
-            off_t chunk_offset = atoll( request_line.substr( range_start + 7, range_mid - (range_start + 7) ).c_str() );
-            off_t chunk_last   = atoll( request_line.substr( range_mid   + 1, range_end - (range_mid   + 1) ).c_str() );
-            off_t chunk_len = chunk_last - chunk_offset + 1;
+            // For YouTube media requests the range of bytes from a media file is expressed in the range parameter. 
+            // For example: &range=795597-968468, which means that we should look for a byte range from 795597-968468 inclusive on both ends. 
+            string range_param = get_param("range", request_line);
+            size_t range_dash   = range_param.find( '-' );
+            off_t chunk_start = atoll( range_param.substr( 0, range_dash ).c_str() );
+            off_t chunk_end  = atoll( range_param.substr( range_dash   + 1, range_param.length() - (range_dash + 1) ).c_str() );
+            off_t chunk_len = chunk_end - chunk_start + 1;
 
 
-            // For YouTube media requests the requested media file size is expressed as a uri parameter. 
+            // For YouTube media requests the requested media file size is expressed as a url parameter. 
             // For example: &clen=153400, which means that we should look for a byte range in a file of size 153400. 
             string clen_str = get_param("clen", request_line);
             off_t clen = atoll( clen_str.c_str() );
+         
 
-
-            // For YouTube media requests the MIME format (audio or video) is expressed as a uri parameter. 
+            // For YouTube media requests the MIME format (audio or video) is expressed as a url parameter. 
             // For example: &mime=video%2Fwebm, which means that we have a webm video request
             string mime_str = get_param("mime", request_line);
-
             size_t slash_position = mime_str.find("%2F");
             mime_str.replace(slash_position, string("%2F").length(), "/");
+           
 
+            //Once we know the file size, the media format, and the range of bytes, we search locally for the correct file. Currently, the media directory is hard coded. 
             string requested_file_directory = working_directory + "/media_files/the_shot_trey_burke_media_files/" + mime_str + "/";
             vector<string> filenames; 
             string requested_filename = "";
@@ -196,7 +198,7 @@ int main( void )
             for( auto & filename : filenames ) {
                 struct stat fileinfo; 
                 SystemCall( "stat", stat( filename.c_str(), &fileinfo ));
-                if(clen == fileinfo.st_size) {
+                if(clen == fileinfo.st_size) { //If the size matches the youtube request clen parameter, we know we have the correct file. 
                     requested_filename = filename;
                     found_matching_file = true; 
                     break;
@@ -208,38 +210,35 @@ int main( void )
             }
           
 
-            HTTPResponse response = HTTPResponse(); 
-        
+            HTTPResponse response = HTTPResponse(); //Create a new response object to respond to the YouTube request
 
-            HTTPRequest request = HTTPRequest();
-            request.set_first_line( request_line );
-           
-            response.set_request(request);
+            HTTPRequest request = HTTPRequest(); //Create a new request object, which is mapped to the response object
 
+            request.set_first_line( request_line ); //Set the first line of the request object to the YouTube request
+
+            response.set_request(request); //Map the request object to the response object
+
+            //Create a new response object for the pre-recorded best match so we can copy the first line and headers
             HTTPResponse best_match_response = HTTPResponse(best_match.response()); 
-
             
-           
-            response.set_first_line( best_match_response.first_line() ); //Set the first line of response to the actual request line
+            response.set_first_line( best_match_response.first_line() ); //Set the first line of our response to the first line of the best match
 
-            /* Set the headers of the response to the headers of the best match for the request 
-               i.e. only the body and request are different from the best match */
-             
-
-            std::vector< HTTPHeader > best_match_response_headers = best_match_response.get_headers(); 
+            //Copy the headers of the saved best match to our response object
+            std::vector< HTTPHeader > best_match_response_headers = best_match_response.headers(); 
             for( const auto & header : best_match_response_headers) {
                  response.add_or_replace_header(header);
             }
          
-
+            //Replace the copied best match headers with the actual byte range length from the YouTube media request and the actual media format
             response.add_or_replace_header( HTTPHeader("Content-Length:" + to_string(chunk_len)));
             response.add_or_replace_header( HTTPHeader("Content-Type:" + mime_str));
            
-            response.done_with_headers(); 
+            response.done_with_headers(); //Needed for the response object interface
         
-             
+
+            //Read the byte range from the correct file and set as the body of our response.      
             ifstream file{ requested_filename, ifstream::in | ifstream::binary };
-            file.seekg( chunk_offset, ifstream::beg );
+            file.seekg( chunk_start, ifstream::beg );
 
             char * buf = new char[chunk_len];
             file.read( buf, chunk_len );

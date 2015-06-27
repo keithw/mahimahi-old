@@ -68,7 +68,7 @@ public:
     /* troll through the headers */
     bool has_header( const std::string & header_name ) const;
     const std::string & get_header_value( const std::string & header_name ) const;
-    std::vector< HTTPHeader > get_headers();
+    std::vector< HTTPHeader > & headers();
 
     /* serialize the request or response as one string */
     std::string str( void ) const;

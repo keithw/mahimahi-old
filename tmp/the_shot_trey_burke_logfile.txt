@@ -1,0 +1,15 @@
+Request Line: GET /videoplayback?requiressl=yes&mime=audio%2Fmp4&ip=171.66.3.232&source=youtube&signature=E8221A50514DDE308A960BD4C00D754E6898C36E.755D6673B2A11EE861643DF9663BC9546D24430B&mt=1435367072&itag=140&pl=15&ms=au&upn=yJNPfPf9kbk&clen=968469&mm=31&expire=1435388762&sver=3&id=o-AByVIK2h70wCT5PVYrEvZcoC6SptFySLrutjUdyzJW1w&mv=m&gir=yes&mn=sn-o097znez&sparams=clen%2Cdur%2Cgir%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Crequiressl%2Csource%2Cupn%2Cexpire&fexp=901816%2C9406715%2C9406854%2C9407141%2C9408142%2C9408420%2C9408710%2C9409206%2C9410705%2C9412755%2C9412780%2C9413142%2C9413321%2C9413503%2C9415528%2C9415945%2C9416126%2C9416456%2C952640&lmt=1393533142263544&key=yt5&dur=60.929&ipbits=0&initcwndbps=7300000&cpn=0nItXHqBGk17kS6L&alr=yes&keepalive=yes&ratebypass=yes&c=WEB&cver=html5&range=795597-968468 HTTP/1.1
+Range Parameter:795597-968468
+Got from range parameter:795597-968468
+CLEN found: 968469
+MIME found: audio/mp4
+Request Line: GET /videoplayback?requiressl=yes&mime=video%2Fmp4&ip=171.66.3.232&source=youtube&signature=A1E86F3B5ECA5E6DCE3B1CDC682F394BEC172D2F.EA55AB78E54B05AB11B902DBA383CD24A2EEAAAE&mt=1435367072&itag=135&pl=15&ms=au&upn=yJNPfPf9kbk&clen=7726511&mm=31&expire=1435388762&sver=3&id=o-AByVIK2h70wCT5PVYrEvZcoC6SptFySLrutjUdyzJW1w&mv=m&gir=yes&mn=sn-o097znez&sparams=clen%2Cdur%2Cgir%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Crequiressl%2Csource%2Cupn%2Cexpire&fexp=901816%2C9406715%2C9406854%2C9407141%2C9408142%2C9408420%2C9408710%2C9409206%2C9410705%2C9412755%2C9412780%2C9413142%2C9413321%2C9413503%2C9415528%2C9415945%2C9416126%2C9416456%2C952640&lmt=1393533146135730&key=yt5&dur=60.866&ipbits=0&initcwndbps=7300000&cpn=0nItXHqBGk17kS6L&alr=yes&keepalive=yes&ratebypass=yes&c=WEB&cver=html5&range=0-889 HTTP/1.1
+Range Parameter:0-889
+Got from range parameter:0-889
+CLEN found: 7726511
+MIME found: video/mp4
+Request Line: GET /videoplayback?requiressl=yes&mime=video%2Fmp4&ip=171.66.3.232&source=youtube&signature=A1E86F3B5ECA5E6DCE3B1CDC682F394BEC172D2F.EA55AB78E54B05AB11B902DBA383CD24A2EEAAAE&mt=1435367072&itag=135&pl=15&ms=au&upn=yJNPfPf9kbk&clen=7726511&mm=31&expire=1435388762&sver=3&id=o-AByVIK2h70wCT5PVYrEvZcoC6SptFySLrutjUdyzJW1w&mv=m&gir=yes&mn=sn-o097znez&sparams=clen%2Cdur%2Cgir%2Cid%2Cinitcwndbps%2Cip%2Cipbits%2Citag%2Clmt%2Cmime%2Cmm%2Cmn%2Cms%2Cmv%2Cpl%2Crequiressl%2Csource%2Cupn%2Cexpire&fexp=901816%2C9406715%2C9406854%2C9407141%2C9408142%2C9408420%2C9408710%2C9409206%2C9410705%2C9412755%2C9412780%2C9413142%2C9413321%2C9413503%2C9415528%2C9415945%2C9416126%2C9416456%2C952640&lmt=1393533146135730&key=yt5&dur=60.866&ipbits=0&initcwndbps=7300000&cpn=0nItXHqBGk17kS6L&alr=yes&keepalive=yes&ratebypass=yes&c=WEB&cver=html5&range=6916636-7726510 HTTP/1.1
+Range Parameter:6916636-7726510
+Got from range parameter:6916636-7726510
+CLEN found: 7726511
+MIME found: video/mp4
