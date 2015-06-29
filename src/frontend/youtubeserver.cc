@@ -164,7 +164,7 @@ int main( void )
         //The request line contains the command and url. Youtube media requests for audio and video contain GET /videoplayback? in the request line. 
         if(is_youtube_media_request(request_line) && best_score > 0) {
             // Log the request meta data to the logfile. The logfile is available currently as a debugging tool only. 
-            string video_id = "cf_Ano-XmuY";
+            string video_id = "A9Fqe_kacPI";
             string logfilename = "./youtube_logs/" + video_id + ".txt";
             FileDescriptor logfile( SystemCall( "open", open(logfilename.c_str(), O_WRONLY | O_APPEND | O_CREAT, S_IRUSR | S_IWUSR)));
            

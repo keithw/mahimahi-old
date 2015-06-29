@@ -23,75 +23,88 @@ def delete_filesys_subtree(root_directory):
 	        print e
 
 def main():
-  match_object = re.search("\?v=(.+)", sys.argv[1])
-  if not match_object:
-  	print sys.argv[1] + " is not a valid youtube url" 
-  else:
-  	video_id = match_object.group(1)
-  	print video_id 
-  	proc = subprocess.Popen("youtube-dl -F " + sys.argv[1], stdout=subprocess.PIPE, shell=True)
-  	(out, err) = proc.communicate()
-  	print out
-  	print 'Grabbing all available DASH video and DASH audio files for ', sys.argv[1]
-  	newpath =  os.path.dirname(os.path.realpath(__file__)) + "/media_files/" + video_id
-	print "Storing media files in " + newpath
-	if os.path.exists(newpath): 
-		delete_filesys_subtree(newpath)
-		os.makedirs(newpath)
-		os.makedirs(newpath + "/audio")
-		os.makedirs(newpath + "/video")
-		os.makedire(newpath + "/audio/mp4")
-		os.makedire(newpath + "/video/mp4")
-		os.makedire(newpath + "/video/webm")
-		os.makedire(newpath + "/audio/webm")
-	file_id = 1
-	for lno, line in enumerate(out.splitlines()):
-		if(re.search("DASH", line)):
-			print "LINE " + str(lno) + " " + line
-			download_id_match_object = re.match("([0-9]+)", line)
-			if not download_id_match_object: 
-				print "ERROR: Line " + line + " has no download identifier."
-				sys.exit()
-			else: 
-				download_id = download_id_match_object.group(1)
-				mime_prefix = ""
-				mime_suffix = ""
-				video_resolution = ""
-				if(re.search("audio", line)):
-					mime_prefix = "audio"
-				if(re.search("video", line)):
-					mime_prefix = "video"
-					video_resolution_match_object = re.search("([0-9]+p)", line)
-					if(video_resolution_match_object):
-						video_resolution = video_resolution_match_object.group(1)
-				if(re.search("webm", line)):
-					mime_suffix = "webm"
-				if(re.search("mp4", line)):
-					mime_suffix = "mp4"
-				if(re.search("m4a", line)):
-					mime_suffix = "mp4"
-				if(mime_prefix == "" or mime_suffix == ""):
-					print "ERROR: Could not parse line " + line + " for mime format."
-					sys.exit()
-				mime_format = mime_prefix + "/" + mime_suffix
-				proc = subprocess.Popen("youtube-dl -o " + newpath + "/" + mime_format + " -f " + download_id + " " + sys.argv[1], stdout=subprocess.PIPE, shell=True)
-				(out, err) = proc.communicate()
-				destination_filename = ""
-				for line in out.splitlines():
-					destination_filename_match_object = re.search("Destination: (.+)", line)
-					if(destination_filename_match_object): 
-						destination_filename = destination_filename_match_object.group(1)
-				if(destination_filename == ""):
-					print "ERROR: Could not parse destination filename."
-					sys.exit()
-				filename_suffix = ""
-				if(video_resolution == ""):
-					filename_suffix = mime_prefix + file_id
-					file_id = file_id + 1
+	print
+	youtube_url = sys.argv[1]
+  	match_object = re.search("\?v=(.+)", youtube_url)
+  	video_id = ""
+ 	if not match_object:
+  		match_object = re.search("/embed/([_a-zA-Z0-9\-]+)", youtube_url)
+	if not match_object:
+		print "ERROR: " + youtube_url + " is not a valid youtube url" 
+		sys.exit()
+  	else:
+  		video_id = match_object.group(1)
+  		print "Running youtube-dl on video id " + video_id + "......"
+  		print
+  		print "Available formats are as follows: "
+  		proc = subprocess.Popen("youtube-dl -F " + youtube_url, stdout=subprocess.PIPE, shell=True)
+  		(out, err) = proc.communicate()
+  		print out
+  		print "Grabbing all mp4, webm, and m4a DASH files for video id " + video_id + "......"
+  		print
+  		newpath =  os.path.dirname(os.path.realpath(__file__)) + "/media_files/" + video_id
+		print "Storing media files in " + newpath + "......"
+		print
+		if os.path.exists(newpath): 
+			delete_filesys_subtree(newpath)
+			os.makedirs(newpath + "/audio")
+			os.makedirs(newpath + "/video")
+			os.makedirs(newpath + "/audio/mp4")
+			os.makedirs(newpath + "/video/mp4")
+			os.makedirs(newpath + "/video/webm")
+			os.makedirs(newpath + "/audio/webm")
+		file_id = 1
+		for lno, line in enumerate(out.splitlines()):
+			if(re.search("DASH", line)):
+				print "Downloading file specified by " + line
+				download_id_match_object = re.match("([0-9]+)", line)
+				if not download_id_match_object: 
+					print
+					print "ERROR: Line " + line + " has no download identifier."
 				else: 
-					filename_suffix = video_resolution
-				new_filename = newpath + "/" + mime_format + "/" + filename_suffix
-				os.rename(destination_filename, new_filename)
+					download_id = download_id_match_object.group(1)
+					mime_prefix = ""
+					mime_suffix = ""
+					video_resolution = ""
+					if(re.search("audio", line)):
+						mime_prefix = "audio"
+					if(re.search("video", line)):
+						mime_prefix = "video"
+						video_resolution_match_object = re.search("([0-9]+p)", line)
+						if(video_resolution_match_object):
+							video_resolution = video_resolution_match_object.group(1)
+					if(re.search("webm", line)):
+						mime_suffix = "webm"
+					if(re.search("mp4", line)):
+						mime_suffix = "mp4"
+					if(re.search("m4a", line)):
+						mime_suffix = "mp4"
+					if(mime_prefix == "" or mime_suffix == ""):
+						print
+						print "ERROR: Could not parse line " + line + " for mime format."
+						sys.exit()
+					mime_format = mime_prefix + "/" + mime_suffix
+					download_command = "youtube-dl -o " + newpath + "/" + mime_format + "/" + download_id + " -f " + download_id + " " + youtube_url
+					print "Runnding command " + download_command + "......"
+					proc = subprocess.Popen(download_command, stdout=subprocess.PIPE, shell=True)
+					(out, err) = proc.communicate()
+					print out
+					# destination_filename = ""
+					# for line in out.splitlines():
+					# 	destination_filename_match_object = re.search("Destination: (.+)", line)
+					# 	if(destination_filename_match_object): 
+					# 		destination_filename = destination_filename_match_object.group(1)
+					# if(destination_filename == ""):
+					# 	print "ERROR: Could not parse destination filename."
+					# 	sys.exit()
+					# filename_suffix = ""
+					# if(video_resolution == ""):
+					# 	filename_suffix = mime_prefix + file_id
+					# 	file_id = file_id + 1
+					# else: 
+					# 	filename_suffix = video_resolution
+					# new_filename = newpath + "/" + mime_format + "/" + filename_suffix
+					# os.rename(destination_filename, new_filename)
 
 # Standard boilerplate to call the main() function to begin
 # the program.

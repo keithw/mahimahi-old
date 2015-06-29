@@ -30,6 +30,8 @@ def main():
 	match_object = re.search("\?v=(.+)", youtube_url)
 	video_id = ""
   	if not match_object:
+  		match_object = re.search("/embed/([_a-zA-Z0-9\-]+)", youtube_url)
+	if not match_object:
   		print sys.argv[1] + " is not a valid youtube url" 
   		sys.exit()
   	else:
