@@ -29,4 +29,10 @@ src/frontend/mm-onoff
 src/frontend/mm-meter
 src/frontend/mm-webrecord
 src/frontend/mm-webreplay
+src/frontend/mm-youtubereplay
 src/frontend/nph-replayserver.cgi
+src/frontend/nph-youtubeserver.cgi
+
+media_files/*
+saved_requests/*
+youtube_logs/*
