@@ -18,14 +18,13 @@ private:
     HTTPRequest request_ {};
 
     /* required methods */
-   
+    void calculate_expected_body_size( void ) override;
     size_t read_in_complex_body( const std::string & str ) override;
     bool eof_in_body( void ) const override;
 
     std::unique_ptr< BodyParser > body_parser_ { nullptr };
 
 public:
-    void calculate_expected_body_size( void ) override;
     void set_request( const HTTPRequest & request );
     const HTTPRequest & request( void ) const { return request_; }
 
