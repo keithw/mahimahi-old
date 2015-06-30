@@ -22,6 +22,19 @@ def delete_filesys_subtree(root_directory):
 	    except Exception, e:
 	        print e
 
+def get_media_resolution(line):
+	match_object = re.search("DASH video", line)
+	if(match_object):
+		match_object = re.search("([0-9]+x[0-9]+)", line)
+		if(match_object):
+			return match_object.group(1)
+	match_object = re.search("DASH audio", line)
+	if(match_object):
+		match_object = re.search("DASH audio\t[0-9]+k , (?:m4a_dash container, )?(.+)", line)
+		if(match_object):
+			return match_object.group(1)
+	return ""
+
 def main():
 	print
 	youtube_url = sys.argv[1]
@@ -53,7 +66,6 @@ def main():
 			os.makedirs(newpath + "/video/mp4")
 			os.makedirs(newpath + "/video/webm")
 			os.makedirs(newpath + "/audio/webm")
-		file_id = 1
 		for lno, line in enumerate(out.splitlines()):
 			if(re.search("DASH video", line) or re.search("DASH audio", line)):
 				print "Downloading file specified by " + line
@@ -84,27 +96,17 @@ def main():
 						print "ERROR: Could not parse line " + line + " for mime format."
 						sys.exit()
 					mime_format = mime_prefix + "/" + mime_suffix
-					download_command = "youtube-dl -o " + newpath + "/" + mime_format + "/" + download_id + " -f " + download_id + " " + youtube_url
+					destination_filename = newpath + "/" + mime_format + "/" + download_id
+					download_command = "youtube-dl -o " + destination_filename + " -f " + download_id + " " + youtube_url
 					print "Runnding command " + download_command + "......"
 					proc = subprocess.Popen(download_command, stdout=subprocess.PIPE, shell=True)
 					(out, err) = proc.communicate()
 					print out
-					# destination_filename = ""
-					# for line in out.splitlines():
-					# 	destination_filename_match_object = re.search("Destination: (.+)", line)
-					# 	if(destination_filename_match_object): 
-					# 		destination_filename = destination_filename_match_object.group(1)
-					# if(destination_filename == ""):
-					# 	print "ERROR: Could not parse destination filename."
-					# 	sys.exit()
-					# filename_suffix = ""
-					# if(video_resolution == ""):
-					# 	filename_suffix = mime_prefix + file_id
-					# 	file_id = file_id + 1
-					# else: 
-					# 	filename_suffix = video_resolution
-					# new_filename = newpath + "/" + mime_format + "/" + filename_suffix
-					# os.rename(destination_filename, new_filename)
+					filename_suffix = get_media_resolution(line); 
+					if(filename_suffix == ""):
+						filename_suffix = download_id
+					new_filename = newpath + "/" + mime_format + "/" + filename_suffix
+					os.rename(destination_filename, new_filename)
 
 # Standard boilerplate to call the main() function to begin
 # the program.

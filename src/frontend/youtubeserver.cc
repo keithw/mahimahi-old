@@ -11,6 +11,7 @@
 #include <sstream>
 #include <fstream>
 #include <regex>
+#include <ctime>
 
 #include "util.hh"
 #include "http_record.pb.h"
@@ -170,10 +171,10 @@ int main( void )
 
             
             string video_url = best_match_request.get_header_value("Referer");
-            regex re ("/embed/((?:[a-zA-Z0-9]|_|-)+)");
-            smatch sm;
-            regex_search(video_url, sm, re);
-            string video_id = sm[1];
+            regex video_id_re ("/embed/((?:[a-zA-Z0-9]|_|-)+)");
+            smatch video_id_sm;
+            regex_search(video_url, video_id_sm, video_id_re);
+            string video_id = video_id_sm[1];
       
             //Use the video id to create a unique log file, which will log the video quality for every request 
             string logfilename = "./youtube_logs/" + video_id + ".txt";
@@ -216,6 +217,21 @@ int main( void )
                     break;
                 }
             }
+
+            regex resolution_re ("([0-9]+x[0-9]+)");
+            smatch resolution_sm;
+            regex_search(requested_filename, resolution_sm, resolution_re);
+            string resolution = resolution_sm[1];
+            if(resolution == ""){
+                resolution = "audio";
+            }
+
+            time_t t = time(0);   // get time now
+            struct tm * now = localtime( & t );
+            string timestamp = asctime(now);
+            timestamp.erase(remove(timestamp.begin(), timestamp.end(), '\n'), timestamp.end());
+            logfile.write( timestamp + ": ");
+            logfile.write(resolution + "\n");
 
             if( !found_matching_file ) {
                 throw runtime_error( "could not find a file with format " + mime_str + " and size " + clen_str + " on the YouTube server");
