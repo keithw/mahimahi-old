@@ -10,7 +10,7 @@
 # the mm-webrecord files are stored in a ./saved_requests directory. 
 # These two directories are automatically created by the script.
 
-# USAGE: python youtube_config.py youtube_url
+# USAGE: python youtube_config.py 'youtube_url'
 
 import sys
 import re
@@ -43,6 +43,7 @@ def main():
   		print "Detected youtube url with video id " + video_id
 	media_files_path =  os.path.dirname(os.path.realpath(__file__)) + "/media_files/" + video_id
 	saved_requests_path = os.path.dirname(os.path.realpath(__file__)) + "/saved_requests/" + video_id
+	print youtube_url
 	print media_files_path
 	print saved_requests_path
 	print "Checking for saved session data......"
@@ -52,13 +53,13 @@ def main():
 		if(should_run_mm_webrecord):
 			print "RUNNING mm-webrecord to record new session. Please play video when browser pops up and wait 20 seconds to save enough requests."
 			os.system("rm -rf " + saved_requests_path)
-			os.system("mm-webrecord " + saved_requests_path + " chromium-browser --ignore-certificate-errors --user-data-dir=/tmp/nonexistent$(date +%s%N) " + youtube_url)
+			os.system("mm-webrecord " + saved_requests_path + " chromium-browser --ignore-certificate-errors --user-data-dir=/tmp/nonexistent$(date +%s%N) '" + youtube_url + "'")
 		else: 
 			print "SKIPPING mm-webrecord......"
 	else:
 		print "RUNNING mm-webrecord to record new session. Please play video when browser pops up and wait 20 seconds to save enough requests."
 		os.system("rm -rf " + saved_requests_path)
-		os.system("mm-webrecord " + saved_requests_path + " chromium-browser --ignore-certificate-errors --user-data-dir=/tmp/nonexistent$(date +%s%N) " + youtube_url)
+		os.system("mm-webrecord " + saved_requests_path + " chromium-browser --ignore-certificate-errors --user-data-dir=/tmp/nonexistent$(date +%s%N) '" + youtube_url + "'")
 	print
 	print "Checking for downloaded media files......"
 	print
@@ -67,15 +68,15 @@ def main():
 		if(should_run_youtube_dl):
 			print "RUNNING youtube-dl on all DASH audio and video files for " + youtube_url
 			os.system("rm -rf " + media_files_path)
-			os.system("python youtube_download.py " + youtube_url)
+			os.system("python youtube_download.py '" + youtube_url + "'")
 		else: 
 			print "SKIPPING youtube_download......"
 	else:
 		print "RUNNING youtube-dl on all DASH audio and video files for " + youtube_url
 		os.system("rm -rf " + media_files_path)
-		os.system("python youtube_download.py " + youtube_url)
+		os.system("python youtube_download.py '" + youtube_url + "'")
 	print
-	print "SUCCESS you are now ready to run python youtube_replay.py " + youtube_url
+	print "SUCCESS you are now ready to run python youtube_replay.py '" + youtube_url + "'"
 		
 
 if __name__ == '__main__':

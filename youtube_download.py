@@ -4,7 +4,7 @@
 
 # It is meant to be run by youtube_config.py, not by the user. 
 
-# USAGE: python youtube_download.py youtube_url
+# USAGE: python youtube_download.py 'youtube_url'
 
 import sys
 import subprocess
