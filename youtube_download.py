@@ -28,11 +28,11 @@ def get_media_resolution(line):
 		match_object = re.search("([0-9]+x[0-9]+)", line)
 		if(match_object):
 			return match_object.group(1)
-	match_object = re.search("DASH audio", line)
-	if(match_object):
-		match_object = re.search("DASH audio\t[0-9]+k , (?:m4a_dash container, )?(.+)", line)
-		if(match_object):
-			return match_object.group(1)
+	#match_object = re.search("DASH audio", line)
+	#if(match_object):
+	#	match_object = re.search("DASH audio\t[0-9]+k , (?:m4a_dash container, )?(.+)", line)
+	#	if(match_object):
+	#		return match_object.group(1)
 	return ""
 
 def main():
