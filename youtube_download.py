@@ -2,7 +2,7 @@
 
 # This script downloads video from youtube for the youtube emulation server
 
-# It is meant to be run by youtube_record.py, not by the user. 
+# It is meant to be run by youtube_config.py, not by the user. 
 
 # USAGE: python youtube_download.py youtube_url
 
@@ -25,19 +25,19 @@ def delete_filesys_subtree(root_directory):
 def main():
 	print
 	youtube_url = sys.argv[1]
-  	match_object = re.search("\?v=(.+)", youtube_url)
+  	match_object = re.search("/embed/([_a-zA-Z0-9\-]+)", youtube_url)
   	video_id = ""
- 	if not match_object:
-  		match_object = re.search("/embed/([_a-zA-Z0-9\-]+)", youtube_url)
 	if not match_object:
-		print "ERROR: " + youtube_url + " is not a valid youtube url" 
+		print "ERROR: " + youtube_url + " is not a valid embed youtube url" 
 		sys.exit()
   	else:
   		video_id = match_object.group(1)
   		print "Running youtube-dl on video id " + video_id + "......"
   		print
   		print "Available formats are as follows: "
-  		proc = subprocess.Popen("youtube-dl -F " + youtube_url, stdout=subprocess.PIPE, shell=True)
+  		formats_command = "youtube-dl -F " + youtube_url
+  		print "Runnding command " + formats_command + "......"
+  		proc = subprocess.Popen(formats_command, stdout=subprocess.PIPE, shell=True)
   		(out, err) = proc.communicate()
   		print out
   		print "Grabbing all mp4, webm, and m4a DASH files for video id " + video_id + "......"
@@ -55,7 +55,7 @@ def main():
 			os.makedirs(newpath + "/audio/webm")
 		file_id = 1
 		for lno, line in enumerate(out.splitlines()):
-			if(re.search("DASH", line)):
+			if(re.search("DASH video", line) or re.search("DASH audio", line)):
 				print "Downloading file specified by " + line
 				download_id_match_object = re.match("([0-9]+)", line)
 				if not download_id_match_object: 

@@ -6,7 +6,7 @@
 # The media files must be stored in a media_files directory and
 # the mm-webrecord files must be stored in a saved_requests directory. 
 # Note that these two directories are automatically created by 
-# youtube_record.py. 
+# youtube_config.py. 
 
 # USAGE: python youtube_replay.py youtube_url
 
@@ -16,12 +16,10 @@ import re
 
 def main():
 	youtube_url = sys.argv[1]
-	match_object = re.search("\?v=(.+)", youtube_url)
+	match_object = re.search("/embed/([_a-zA-Z0-9\-]+)", youtube_url)
 	video_id = ""
-  	if not match_object:
-  		match_object = re.search("/embed/([_a-zA-Z0-9\-]+)", youtube_url)
 	if not match_object:
-  		print "ERROR: " + youtube_url + " is not a valid youtube url" 
+  		print "ERROR: " + youtube_url + " is not a valid embed youtube url" 
   		sys.exit()
   	else:
   		video_id = match_object.group(1)
@@ -33,13 +31,13 @@ def main():
 	if not os.path.exists(saved_requests_path): 
 		print "ERROR: It appears there is no saved session data for the youtube video corresponding to video id " + video_id
 		print "ERROR: Recorded session data could not be found where it is expected in " + saved_requests_path
-		print "ERROR: Please run python youtube_record.py " + youtube_url + " to correct this error "
+		print "ERROR: Please run python youtube_config.py " + youtube_url + " to correct this error "
 		print
 		sys.exit()
 	if not os.path.exists(media_files_path):
 		print "ERROR: It appears there are no saved media files for the youtube video corresponding to video id " + video_id
 		print "ERROR: Downloaded media files could not be found where they are expected in " + media_files_path
-		print "ERROR: Please run python youtube_record.py " + youtube_url + " to correct this error "
+		print "ERROR: Please run python youtube_config.py " + youtube_url + " to correct this error "
 		print
 		sys.exit()
 	os.system("mm-youtubereplay " + saved_requests_path + " chromium-browser --ignore-certificate-errors --user-data-dir=/tmp/nonexistent$(date +%s%N) " + youtube_url)

@@ -10,6 +10,7 @@
 #include <limits>
 #include <sstream>
 #include <fstream>
+#include <regex>
 
 #include "util.hh"
 #include "http_record.pb.h"
@@ -163,11 +164,20 @@ int main( void )
 
         //The request line contains the command and url. Youtube media requests for audio and video contain GET /videoplayback? in the request line. 
         if(is_youtube_media_request(request_line) && best_score > 0) {
-            // Log the request meta data to the logfile. The logfile is available currently as a debugging tool only. 
-            string video_id = "A9Fqe_kacPI";
+            //Use the referer header in the best match to find the video id
+            //The referer header from the best match corresponds to the video id passed to mm-webrecord and mm-youtubereplay
+            HTTPRequest best_match_request = HTTPRequest( best_match.request() ); 
+
+            
+            string video_url = best_match_request.get_header_value("Referer");
+            regex re ("/embed/((?:[a-zA-Z0-9]|_|-)+)");
+            smatch sm;
+            regex_search(video_url, sm, re);
+            string video_id = sm[1];
+      
+            //Use the video id to create a unique log file, which will log the video quality for every request 
             string logfilename = "./youtube_logs/" + video_id + ".txt";
             FileDescriptor logfile( SystemCall( "open", open(logfilename.c_str(), O_WRONLY | O_APPEND | O_CREAT, S_IRUSR | S_IWUSR)));
-           
 
             // For YouTube media requests the range of bytes from a media file is expressed in the range parameter. 
             // For example: &range=795597-968468, which means that we should look for a byte range from 795597-968468 inclusive on both ends. 
@@ -220,7 +230,7 @@ int main( void )
 
             response.set_request(request); //Map the request object to the response object
 
-            //Create a new response object for the pre-recorded best match so we can copy the first line and headers
+             //Create a new response object for the pre-recorded best match so we can copy the first line and headers
             HTTPResponse best_match_response = HTTPResponse(best_match.response()); 
             
             response.set_first_line( best_match_response.first_line() ); //Set the first line of our response to the first line of the best match
