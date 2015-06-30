@@ -53,13 +53,13 @@ def main():
 		if(should_run_mm_webrecord):
 			print "RUNNING mm-webrecord to record new session. Please play video when browser pops up and wait 20 seconds to save enough requests."
 			os.system("rm -rf " + saved_requests_path)
-			os.system("mm-webrecord " + saved_requests_path + " chromium-browser --ignore-certificate-errors --user-data-dir=/tmp/nonexistent$(date +%s%N) '" + youtube_url + "'")
+			os.system("mm-webrecord " + saved_requests_path + " chromium-browser --start-maximized --ignore-certificate-errors --user-data-dir=/tmp/nonexistent$(date +%s%N) '" + youtube_url + "'")
 		else: 
 			print "SKIPPING mm-webrecord......"
 	else:
 		print "RUNNING mm-webrecord to record new session. Please play video when browser pops up and wait 20 seconds to save enough requests."
 		os.system("rm -rf " + saved_requests_path)
-		os.system("mm-webrecord " + saved_requests_path + " chromium-browser --ignore-certificate-errors --user-data-dir=/tmp/nonexistent$(date +%s%N) '" + youtube_url + "'")
+		os.system("mm-webrecord " + saved_requests_path + " chromium-browser --start-maximized --ignore-certificate-errors --user-data-dir=/tmp/nonexistent$(date +%s%N) '" + youtube_url + "'")
 	print
 	print "Checking for downloaded media files......"
 	print

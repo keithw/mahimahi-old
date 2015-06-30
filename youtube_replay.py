@@ -45,7 +45,7 @@ def main():
 		print "ERROR: Please run python youtube_config.py " + youtube_url + " to correct this error "
 		print
 		sys.exit()
-	youtube_replay_command = "mm-youtubereplay " + saved_requests_path + " " + extra_parameters + "chromium-browser --ignore-certificate-errors --user-data-dir=/tmp/nonexistent$(date +%s%N) '" + youtube_url + "'"
+	youtube_replay_command = "mm-youtubereplay " + saved_requests_path + " " + extra_parameters + "chromium-browser --start-maximized --ignore-certificate-errors --user-data-dir=/tmp/nonexistent$(date +%s%N) '" + youtube_url + "'"
 	print youtube_replay_command
 	print
 	os.system(youtube_replay_command)
