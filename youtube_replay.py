@@ -8,7 +8,7 @@
 # Note that these two directories are automatically created by 
 # youtube_config.py. 
 
-# USAGE: python youtube_replay.py youtube_url
+# USAGE: python youtube_replay.py youtube_url [optional_mahimahi_parameters...]
 
 import sys
 import os
@@ -16,6 +16,10 @@ import re
 
 def main():
 	youtube_url = sys.argv[1]
+	extra_parameters = ""
+	for i, arg in enumerate(sys.argv):
+		if(i > 1):
+			extra_parameters += arg + " "
 	match_object = re.search("/embed/([_a-zA-Z0-9\-]+)", youtube_url)
 	video_id = ""
 	if not match_object:
@@ -41,7 +45,10 @@ def main():
 		print "ERROR: Please run python youtube_config.py " + youtube_url + " to correct this error "
 		print
 		sys.exit()
-	os.system("mm-youtubereplay " + saved_requests_path + " chromium-browser --ignore-certificate-errors --user-data-dir=/tmp/nonexistent$(date +%s%N) " + youtube_url)
+	youtube_replay_command = "mm-youtubereplay " + saved_requests_path + " " + extra_parameters + "chromium-browser --ignore-certificate-errors --user-data-dir=/tmp/nonexistent$(date +%s%N) " + youtube_url
+	print youtube_replay_command
+	print
+	os.system(youtube_replay_command)
 		
 
 if __name__ == '__main__':
