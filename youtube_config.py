@@ -10,7 +10,7 @@
 # the mm-webrecord files are stored in a ./saved_requests directory. 
 # These two directories are automatically created by the script.
 
-# USAGE: python youtube_record.py youtube_url
+# USAGE: python youtube_config.py youtube_url
 
 import sys
 import re
