@@ -26,6 +26,7 @@ def main():
   		print
   		print "Running mm-youtubereplay on video id " + video_id + "......"
   		print 
+	os.system("rm ./youtube_logs/" + video_id + ".txt")
 	media_files_path =  os.path.dirname(os.path.realpath(__file__)) + "/media_files/" + video_id
 	saved_requests_path = os.path.dirname(os.path.realpath(__file__)) + "/saved_requests/" + video_id
 	if not os.path.exists(saved_requests_path): 
