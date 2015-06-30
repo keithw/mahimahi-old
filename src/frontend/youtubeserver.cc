@@ -218,21 +218,22 @@ int main( void )
                 }
             }
 
+
+            //Parse the resolution information from the filename using regular expressions
             regex resolution_re ("([0-9]+x[0-9]+)");
             smatch resolution_sm;
             regex_search(requested_filename, resolution_sm, resolution_re);
             string resolution = resolution_sm[1];
-            if(resolution == ""){
-                resolution = "audio";
+            if(resolution != ""){ //Currently the code only logs information for video quality
+                time_t t = time(0);   // get time now
+                struct tm * now = localtime( & t );
+                string timestamp = asctime(now);
+                timestamp.erase(remove(timestamp.begin(), timestamp.end(), '\n'), timestamp.end());
+                logfile.write( timestamp + ": ");
+                logfile.write(resolution + "\n");
             }
 
-            time_t t = time(0);   // get time now
-            struct tm * now = localtime( & t );
-            string timestamp = asctime(now);
-            timestamp.erase(remove(timestamp.begin(), timestamp.end(), '\n'), timestamp.end());
-            logfile.write( timestamp + ": ");
-            logfile.write(resolution + "\n");
-
+            
             if( !found_matching_file ) {
                 throw runtime_error( "could not find a file with format " + mime_str + " and size " + clen_str + " on the YouTube server");
             }
