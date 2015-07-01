@@ -229,9 +229,9 @@ int main( void )
                 struct tm * now = localtime( & t );
                 string timestamp = asctime(now);
                 timestamp.erase(remove(timestamp.begin(), timestamp.end(), '\n'), timestamp.end());
-                logfile.write(timestamp + ": \t");
-                logfile.write(resolution + "\t");
-                logfile.write(range_param + "\t");
+                logfile.write(timestamp + " \t");
+                logfile.write(resolution + " \t");
+                logfile.write(range_param + " \n");
             }
 
             
