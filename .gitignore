@@ -37,3 +37,9 @@ src/frontend/nph-youtubeserver.cgi
 media_files/*
 saved_requests/*
 youtube_logs/*
+plots/*
+SSIM/*
+media_indexes/*
+manifest_documents/*
+*.mkv
+*.png

@@ -117,7 +117,8 @@ string get_param(string parameter_name, string url) {
     string formatted_parameter = "&" + parameter_name + "=";
     size_t start_position = url.find( formatted_parameter );
     if( start_position == string::npos ) {
-        throw runtime_error( "no valid " + parameter_name + " parameter found in the YouTube video-playback request url" );
+        //throw runtime_error( "no valid " + parameter_name + " parameter found in the YouTube video-playback request url" );
+        return "";
     }
     size_t formatted_parameter_length = formatted_parameter.length();
     size_t parameter_value_end_pos = url.find( '&', start_position + formatted_parameter_length ); 
@@ -200,6 +201,12 @@ int main( void )
             string mime_str = get_param("mime", request_line);
             size_t slash_position = mime_str.find("%2F");
             mime_str.replace(slash_position, string("%2F").length(), "/");
+
+            if(mime_str == "" || clen_str == "" || range_param == "") {
+                cout << HTTPResponse( best_match.response() ).str();
+                return EXIT_SUCCESS;
+            }
+            
            
 
             //Once we know the file size, the media format, and the range of bytes, we search locally for the correct file. Currently, the media directory is hard coded. 
@@ -252,7 +259,7 @@ int main( void )
             HTTPResponse best_match_response = HTTPResponse(best_match.response()); 
             
             response.set_first_line( best_match_response.first_line() ); //Set the first line of our response to the first line of the best match
-
+            
             //Copy the headers of the saved best match to our response object
             std::vector< HTTPHeader > best_match_response_headers = best_match_response.headers(); 
             for( const auto & header : best_match_response_headers) {
@@ -278,7 +285,7 @@ int main( void )
             stringstream body_stream; 
             body_stream.write(buf, chunk_len);
             delete[] buf;
-           
+            
             response.read_in_body( body_stream.str() ); //Set the content of the response to the data chunk from the media file
 
             cout << response.str(); // return response to client

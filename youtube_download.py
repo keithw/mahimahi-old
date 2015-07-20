@@ -49,7 +49,7 @@ def main():
   		print
   		print "Available formats are as follows: "
   		formats_command = "youtube-dl -F " + youtube_url
-  		print "Runnding command " + formats_command + "......"
+  		print "Running command " + formats_command + "......"
   		proc = subprocess.Popen(formats_command, stdout=subprocess.PIPE, shell=True)
   		(out, err) = proc.communicate()
   		print out
@@ -97,8 +97,8 @@ def main():
 						sys.exit()
 					mime_format = mime_prefix + "/" + mime_suffix
 					destination_filename = newpath + "/" + mime_format + "/" + download_id
-					download_command = "youtube-dl -o " + destination_filename + " -f " + download_id + " " + youtube_url
-					print "Runnding command " + download_command + "......"
+					download_command = "youtube-dl --fixup never -o " + destination_filename + " -f " + download_id + " " + youtube_url
+					print "Running command " + download_command + "......"
 					proc = subprocess.Popen(download_command, stdout=subprocess.PIPE, shell=True)
 					(out, err) = proc.communicate()
 					print out
