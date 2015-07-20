@@ -41,5 +41,6 @@ plots/*
 SSIM/*
 media_indexes/*
 manifest_documents/*
+bento/*
 *.mkv
 *.png
