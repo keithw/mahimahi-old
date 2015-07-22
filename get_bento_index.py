@@ -54,7 +54,7 @@ def main():
   		media_filenames_list = get_media_filenames_list(input_media_files_path)
 		for media_filename in media_filenames_list:
 			file_extension = media_filename.split(input_media_files_path, 1)[1]
-			bento_command = "./bento/bin/mp4dump " + media_filename + " > " + output_index_path + file_extension + "_mp4dump"
+			bento_command = "../bento/bin/mp4dump " + media_filename + " > " + output_index_path + file_extension + "_mp4dump"
 			proc = subprocess.Popen(bento_command, stdout=subprocess.PIPE, shell=True)
 		 	(out, err) = proc.communicate()
 		mp4dump_filenames_list = get_media_filenames_list(output_index_path)
