@@ -40,7 +40,11 @@ youtube_logs/*
 plots/*
 SSIM/*
 media_indexes/*
+SSIM_indexes/*
 manifest_documents/*
 bento/*
+/make_trace.py
+/plot_resolution_overlay.py
+youtube_analysis_output/*
 *.mkv
 *.png

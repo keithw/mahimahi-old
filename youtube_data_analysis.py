@@ -13,7 +13,51 @@ import collections
 import pprint
 import math
 
-def getPlotInfo(logfile_path):
+def get_extended_plot_info(logfile_path):
+	resolution_list = []
+	time_list = []
+	num_bytes_list = []
+	time_first = -1
+	time_last = -1
+	most_bytes_requested = -1
+	with open(logfile_path) as f:	
+		for line in f:
+			resolution = re.search("[0-9]+x([0-9]+)", line)
+			time = re.search("([0-9]+):([0-9]+):([0-9]+)", line)
+			byte_range = re.search("([0-9]+)-([0-9]+)", line)
+			resolution_list += [resolution.group(1)]
+			time_sec = (int(time.group(1)) * 3600 + int(time.group(2)) * 60 + int(time.group(3)))
+			time_list += [time_sec]
+			if time_first == -1:
+				time_first = time_sec
+			time_last = time_sec
+			num_bytes = int(byte_range.group(2)) - int(byte_range.group(1)) 
+			num_bytes_list += [num_bytes]
+			if(num_bytes > most_bytes_requested):
+				most_bytes_requested = num_bytes
+	return (resolution_list, time_list, num_bytes_list, time_first, time_last, most_bytes_requested)
+
+def plot_resolution(logfile_path, output_filename):
+	plot_tuple = get_extended_plot_info(logfile_path)
+	resolution_list = plot_tuple[0]
+	time_list = plot_tuple[1]
+	time_first = plot_tuple[3]
+	time_last = plot_tuple[4]
+	time_last_adjusted = time_last - time_first
+	time_list_adjusted = []
+	for i in range(0, len(time_list)):
+		time_list_adjusted += [time_list[i] - time_first]
+	plt.plot(time_list_adjusted, resolution_list)
+	plt.xlabel('time in seconds')
+	plt.ylabel('resolution')
+	plt.ylim([0, 1440])
+	plt.xlim([-100, time_last_adjusted + 100])
+	plt.savefig(output_filename)
+	os.system('eog ' + output_filename + '&')
+	plt.clf()
+
+
+def get_plot_info(logfile_path):
 	resolution_list = []
 	byte_range_list = []
 	with open(logfile_path) as f:	
@@ -72,7 +116,7 @@ def get_time_range(byte_range, offset_list, time_last):
 		end_time = str(time_last)
 	return (start_time, end_time)
 
-def plotResolution(graph_dict, time_first, time_last, output_filename):
+def plot_resolution_lines(graph_dict, time_first, time_last, output_filename):
 	for resolution,time_range_list in graph_dict.iteritems():
 		for time_range in time_range_list:
 			plt.plot([time_range[0], time_range[1]], [resolution, resolution], color='Blue', linestyle='-', linewidth=1)
@@ -157,12 +201,13 @@ def get_overlap_list_from_dictionary(graph_dict):
 	return overlap_time_range_list
 
 
-def print_overlap_percentage(graph_dict, duration):
+def print_overlap_percentage(graph_dict, duration, output_filename):
 	overlap_time_range_list = get_overlap_list_from_dictionary(graph_dict)
 	total_overlap_time = 0.0
 	for time_range in overlap_time_range_list:
 		total_overlap_time += float(time_range[1]) - float(time_range[0])
-	print((total_overlap_time * 100) / duration) 
+	output_file = open(output_filename, 'a')
+	print("Overlap Percentage: " + str((total_overlap_time * 100) / duration), file=output_file) 
 
 
 def find_next_range_end(range_start, range_start_list, range_end):
@@ -311,23 +356,23 @@ def plot_SSIM_graph(SSIM_graph_dict, time_first, time_last, output_filename):
 	plt.clf()
 
 
-def print_mean_stddev_SSIM(SSIM_graph_dict):
+def print_mean_stddev_SSIM(SSIM_graph_dict, output_filename):
 	SSIM_scores_data_points_list = list()
 	for resolution,time_ssim_mapping_list in SSIM_graph_dict.iteritems():
 		for time_range_ssim_tup in time_ssim_mapping_list:
 			SSIM_scores_data_points_list += time_range_ssim_tup[1]
 	num_ssim_scores = len(SSIM_scores_data_points_list)
-	print(num_ssim_scores)
 	sum_ssim_scores = 0.0
 	for ssim_score in SSIM_scores_data_points_list:
 		sum_ssim_scores += float(ssim_score)
 	ssim_mean = sum_ssim_scores/num_ssim_scores
-	print(ssim_mean)
+	output_file = open(output_filename, 'a')
+	print("Mean SSIM score: " + str(ssim_mean), file=output_file)
 	sum_ssim_mean_square_error = 0.0
 	for ssim_score in SSIM_scores_data_points_list:
 		sum_ssim_mean_square_error += math.pow(float(ssim_score) - ssim_mean, 2)
 	stddev = math.sqrt(sum_ssim_mean_square_error / num_ssim_scores)
-	print(stddev)
+	print("Standard Deviation of SSIM scores: " + str(stddev), file=output_file)
 
 
 def get_CDF_value(ssim_score, SSIM_scores_data_points_list):
@@ -435,10 +480,23 @@ def sc_read_SSIM_index(index_directory):
 					SSIM_score = match_object.group(1)
 					index[resolution] += [SSIM_score]
 	return index
+
+def configure_file_system(logfile_path):
+	if not os.path.exists("./youtube_analysis_output"):
+		os.system("mkdir youtube_analysis_output")
+	trial_name_match_object = re.search("\.?\/?youtube_logs/([0-9A-Za-z_-]+)\.?(?:[A-Za-z]+)?", logfile_path)
+	if trial_name_match_object:
+		trial_name = trial_name_match_object.group(1)
+	output_filename = "./youtube_analysis_output/" + trial_name + "/"
+	if not os.path.exists(output_filename):
+		os.system("mkdir " + output_filename)
+	return output_filename
 	
 def main():
 	logfile_path = sys.argv[1]
-	plotTuple = getPlotInfo(logfile_path)
+	output_filename = configure_file_system(logfile_path)
+	plot_resolution(logfile_path, output_filename + "resolution_requests.png")
+	plotTuple = get_plot_info(logfile_path)
 	resolution_list = plotTuple[0]
 	byte_range_list = plotTuple[1]
 	index_directory = sys.argv[2]
@@ -472,16 +530,17 @@ def main():
 			time_tuple = (float(time_range[0]), float(time_range[1]))
 			final_graph_dict[resolution_requested] = final_graph_dict[resolution_requested] + [time_tuple]
 	final_graph_dict = get_merged_time_ranges(final_graph_dict)
-	print_overlap_percentage(final_graph_dict, time_last)
-	plotResolution(final_graph_dict, 0, time_last, "./plot_after_index.png")
+	print_overlap_percentage(final_graph_dict, time_last, output_filename + "stats.txt")
+	plot_resolution_lines(final_graph_dict, 0, time_last, output_filename + "resolution_lines_with_overlap.png")
 	final_graph_dict = remove_overlap(final_graph_dict, time_last)
+	plot_resolution_lines(final_graph_dict, 0, time_last, output_filename + "resolution_lines_no_overlap.png")
 	SSIM_dictionary = read_SSIM_index(SSIM_index_directory)
 	SSIM_graph_dict = get_SSIM_graph_dict(final_graph_dict, SSIM_dictionary, index)
-	print_mean_stddev_SSIM(SSIM_graph_dict)
-	cdf_list = plot_CDF(SSIM_graph_dict, "./CDF_plot.png")
-	plot_SSIM_graph(SSIM_graph_dict, 0, time_last, "./SSIM_plot.png")
+	print_mean_stddev_SSIM(SSIM_graph_dict,  output_filename + "stats.txt")
+	cdf_list = plot_CDF(SSIM_graph_dict,  output_filename + "CDF.png")
+	plot_SSIM_graph(SSIM_graph_dict, 0, time_last, output_filename + "SSIM.png")
 	SSIM_index = sc_read_SSIM_index(SSIM_index_directory)
-	sc_plot_CDF_overlay(SSIM_index, "./CDF_SSIM_Resolution_Plot.png", cdf_list)
+	sc_plot_CDF_overlay(SSIM_index, output_filename + "CDF_overlay.png", cdf_list)
 
 	
 

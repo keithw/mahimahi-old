@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-#Usage: python get_index.py 'youtube_url'
+#Usage: python get_bento_index.py 'youtube_url'
 
 from __future__ import print_function
 import sys
