@@ -43,6 +43,8 @@ media_indexes/*
 SSIM_indexes/*
 manifest_documents/*
 bento/*
+youtube_stall_logs/*
+synthetic_traces/*
 /make_trace.py
 /plot_resolution_overlay.py
 youtube_analysis_output/*
