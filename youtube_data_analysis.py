@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-#Usage: python plot_SSIM.py logfile_path index_directory SSIM_index_directory
+#Usage: python youtube_data_analysis.py logfile_path index_directory SSIM_index_directory
 
 from __future__ import print_function
 import pylab
@@ -25,8 +25,9 @@ def get_extended_plot_info(logfile_path):
 			resolution = re.search("[0-9]+x([0-9]+)", line)
 			time = re.search("([0-9]+):([0-9]+):([0-9]+)", line)
 			byte_range = re.search("([0-9]+)-([0-9]+)", line)
+			month_day = re.search("([A-Z][a-z]{2}) ([A-Z][a-z]{2})  ?([0-9]+)", line)
 			resolution_list += [resolution.group(1)]
-			time_sec = (int(time.group(1)) * 3600 + int(time.group(2)) * 60 + int(time.group(3)))
+			time_sec = (int(month_day.group(3)) * 86400 + int(time.group(1)) * 3600 + int(time.group(2)) * 60 + int(time.group(3)))
 			time_list += [time_sec]
 			if time_first == -1:
 				time_first = time_sec
@@ -236,7 +237,7 @@ def remove_overlap(graph_dict, time_last):
 	overlap_time_range_list = get_overlap_list_from_dictionary(graph_dict)
 	range_list_no_overlap = list()
 	current_range_list_end_time = 0.0
-	resolutions = ['1080', '720', '480', '360', '240', '140']
+	resolutions = ['1080', '720', '480', '360', '240', '144']
 	graph_dict_no_overlap = collections.defaultdict(lambda: list())
 	range_start_list = list()
 	for resolution in resolutions:
@@ -249,6 +250,8 @@ def remove_overlap(graph_dict, time_last):
 			time_range_list = graph_dict[resolution]
 			time_range_index = 0
 			selected_time_range = False
+			if not time_range_index < len(time_range_list):
+				continue
 			while(time_range_list[time_range_index][0] <= current_range_list_end_time):
 				if current_range_list_end_time < time_range_list[time_range_index][1]:
 					range_list_no_overlap += [trim_overlap(time_range_list[time_range_index], range_start_list, overlap_time_range_list, current_range_list_end_time)]
@@ -482,11 +485,16 @@ def sc_read_SSIM_index(index_directory):
 	return index
 
 def configure_file_system(logfile_path):
+	trial_name = "unknown_trial_name"
 	if not os.path.exists("./youtube_analysis_output"):
 		os.system("mkdir youtube_analysis_output")
 	trial_name_match_object = re.search("\.?\/?youtube_logs/([0-9A-Za-z_-]+)\.?(?:[A-Za-z]+)?", logfile_path)
 	if trial_name_match_object:
 		trial_name = trial_name_match_object.group(1)
+	else:
+		trial_name_match_object = re.search(".+\/([0-9A-Za-z_-]+)\.txt", logfile_path)
+		if trial_name_match_object:
+			trial_name = trial_name_match_object.group(1)
 	output_filename = "./youtube_analysis_output/" + trial_name + "/"
 	if not os.path.exists(output_filename):
 		os.system("mkdir " + output_filename)

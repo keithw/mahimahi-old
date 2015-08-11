@@ -238,7 +238,8 @@ int main( void )
                 timestamp.erase(remove(timestamp.begin(), timestamp.end(), '\n'), timestamp.end());
                 logfile.write(timestamp + " \t");
                 logfile.write(resolution + " \t");
-                logfile.write(range_param + " \n");
+                logfile.write(range_param + " \t");
+                logfile.write(mime_str + "\n");
             }
 
             
