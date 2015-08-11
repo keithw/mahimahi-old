@@ -53,6 +53,9 @@ def main():
   		proc = subprocess.Popen(formats_command, stdout=subprocess.PIPE, shell=True)
   		(out, err) = proc.communicate()
   		print out
+  		if proc.returncode:
+  			print "youtube-dl seems to have failed. Error messages have been posted above. Please fix the errors and run the config script again."
+  			sys.exit(1)
   		print "Grabbing all mp4, webm, and m4a DASH files for video id " + video_id + "......"
   		print
   		newpath =  os.path.dirname(os.path.realpath(__file__)) + "/media_files/" + video_id
@@ -102,6 +105,9 @@ def main():
 					proc = subprocess.Popen(download_command, stdout=subprocess.PIPE, shell=True)
 					(out, err) = proc.communicate()
 					print out
+					if proc.returncode:
+  						print "youtube-dl seems to have failed. Error messages have been posted above. Please fix the errors and run the config script again."
+  						sys.exit(1)
 					filename_suffix = get_media_resolution(line); 
 					if(filename_suffix == ""):
 						filename_suffix = download_id
