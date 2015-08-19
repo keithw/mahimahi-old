@@ -79,16 +79,17 @@ unsigned int match_score( const MahimahiProtobufs::RequestResponse & saved_recor
     if ( (not is_https) and (saved_record.scheme() != MahimahiProtobufs::RequestResponse_Scheme_HTTP) ) {
         return 0;
     }
-
+    
     /* match host header */
     if ( not header_match( "HTTP_HOST", "Host", saved_request ) ) {
         return 0;
     }
 
+    //Commented out user agent to enable saved requests from different computers to work interchangeably
     /* match user agent */
-    if ( not header_match( "HTTP_USER_AGENT", "User-Agent", saved_request ) ) {
-        return 0;
-    }
+    // if ( not header_match( "HTTP_USER_AGENT", "User-Agent", saved_request ) ) {
+    //     return 0;
+    // }
 
     /* must match first line up to "?" at least */
     if ( strip_query( request_line ) != strip_query( saved_request.first_line() ) ) {

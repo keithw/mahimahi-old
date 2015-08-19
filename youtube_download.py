@@ -12,6 +12,15 @@ import re
 import os
 import shutil
 
+def get_yes_or_no(message): 
+	while(True):
+		response = raw_input(message)
+		if(response == "y" or response == "Y"):
+			return True
+		if(response == "n" or response == "N"):
+			return False
+		print "please response with y or n "
+
 def delete_filesys_subtree(root_directory):
 	for the_file in os.listdir(root_directory):
 	    file_path = os.path.join(root_directory, the_file)
@@ -41,78 +50,84 @@ def main():
   	match_object = re.search("/embed/([_a-zA-Z0-9\-]+)", youtube_url)
   	video_id = ""
 	if not match_object:
-		print "ERROR: " + youtube_url + " is not a valid embed youtube url" 
-		sys.exit()
+  		print "ERROR: " + youtube_url + " is not a valid embed youtube url" 
+  		will_provide_video_id = get_yes_or_no("Would you like to provide a video id for your custom url? y/n\n")
+  		if will_provide_video_id:
+  			video_id = raw_input("Please provide the video id in the terminal...\n")
+  			youtube_url = "https://www.youtube.com/embed/" + video_id
+  		else:
+  			print "Without a video id we cannot download your video from YouTube. Either use a correctly formatted YouTube embed url or provide a video id for your custom url."
+  			sys.exit(1)
   	else:
   		video_id = match_object.group(1)
-  		print "Running youtube-dl on video id " + video_id + "......"
-  		print
-  		print "Available formats are as follows: "
-  		formats_command = "youtube-dl -F " + youtube_url
-  		print "Running command " + formats_command + "......"
-  		proc = subprocess.Popen(formats_command, stdout=subprocess.PIPE, shell=True)
-  		(out, err) = proc.communicate()
-  		print out
-  		if proc.returncode:
-  			print "youtube-dl seems to have failed. Error messages have been posted above. Please fix the errors and run the config script again."
-  			sys.exit(1)
-  		print "Grabbing all mp4, webm, and m4a DASH files for video id " + video_id + "......"
-  		print
-  		newpath =  os.path.dirname(os.path.realpath(__file__)) + "/media_files/" + video_id
-		print "Storing media files in " + newpath + "......"
-		print
-		if os.path.exists(newpath): 
-			delete_filesys_subtree(newpath)
-			os.makedirs(newpath + "/audio")
-			os.makedirs(newpath + "/video")
-			os.makedirs(newpath + "/audio/mp4")
-			os.makedirs(newpath + "/video/mp4")
-			os.makedirs(newpath + "/video/webm")
-			os.makedirs(newpath + "/audio/webm")
-		for lno, line in enumerate(out.splitlines()):
-			if(re.search("DASH video", line) or re.search("DASH audio", line)):
-				print "Downloading file specified by " + line
-				download_id_match_object = re.match("([0-9]+)", line)
-				if not download_id_match_object: 
+	print "Running youtube-dl on video id " + video_id + "......"
+	print
+	print "Available formats are as follows: "
+	formats_command = "youtube-dl -F " + youtube_url
+	print "Running command " + formats_command + "......"
+	proc = subprocess.Popen(formats_command, stdout=subprocess.PIPE, shell=True)
+	(out, err) = proc.communicate()
+	print out
+	if proc.returncode:
+		print "youtube-dl seems to have failed. Error messages have been posted above. Please fix the errors and run the config script again."
+		sys.exit(1)
+	print "Grabbing all mp4, webm, and m4a DASH files for video id " + video_id + "......"
+	print
+	newpath =  os.path.dirname(os.path.realpath(__file__)) + "/media_files/" + video_id
+	print "Storing media files in " + newpath + "......"
+	print
+	if os.path.exists(newpath): 
+		delete_filesys_subtree(newpath)
+		os.makedirs(newpath + "/audio")
+		os.makedirs(newpath + "/video")
+		os.makedirs(newpath + "/audio/mp4")
+		os.makedirs(newpath + "/video/mp4")
+		os.makedirs(newpath + "/video/webm")
+		os.makedirs(newpath + "/audio/webm")
+	for lno, line in enumerate(out.splitlines()):
+		if(re.search("DASH video", line) or re.search("DASH audio", line)):
+			print "Downloading file specified by " + line
+			download_id_match_object = re.match("([0-9]+)", line)
+			if not download_id_match_object: 
+				print
+				print "ERROR: Line " + line + " has no download identifier."
+			else: 
+				download_id = download_id_match_object.group(1)
+				mime_prefix = ""
+				mime_suffix = ""
+				video_resolution = ""
+				if(re.search("audio", line)):
+					mime_prefix = "audio"
+				if(re.search("video", line)):
+					mime_prefix = "video"
+					video_resolution_match_object = re.search("([0-9]+p)", line)
+					if(video_resolution_match_object):
+						video_resolution = video_resolution_match_object.group(1)
+				if(re.search("webm", line)):
+					mime_suffix = "webm"
+				if(re.search("mp4", line)):
+					mime_suffix = "mp4"
+				if(re.search("m4a", line)):
+					mime_suffix = "mp4"
+				if(mime_prefix == "" or mime_suffix == ""):
 					print
-					print "ERROR: Line " + line + " has no download identifier."
-				else: 
-					download_id = download_id_match_object.group(1)
-					mime_prefix = ""
-					mime_suffix = ""
-					video_resolution = ""
-					if(re.search("audio", line)):
-						mime_prefix = "audio"
-					if(re.search("video", line)):
-						mime_prefix = "video"
-						video_resolution_match_object = re.search("([0-9]+p)", line)
-						if(video_resolution_match_object):
-							video_resolution = video_resolution_match_object.group(1)
-					if(re.search("webm", line)):
-						mime_suffix = "webm"
-					if(re.search("mp4", line)):
-						mime_suffix = "mp4"
-					if(re.search("m4a", line)):
-						mime_suffix = "mp4"
-					if(mime_prefix == "" or mime_suffix == ""):
-						print
-						print "ERROR: Could not parse line " + line + " for mime format."
-						sys.exit()
-					mime_format = mime_prefix + "/" + mime_suffix
-					destination_filename = newpath + "/" + mime_format + "/" + download_id
-					download_command = "youtube-dl --fixup never -o " + destination_filename + " -f " + download_id + " " + youtube_url
-					print "Running command " + download_command + "......"
-					proc = subprocess.Popen(download_command, stdout=subprocess.PIPE, shell=True)
-					(out, err) = proc.communicate()
-					print out
-					if proc.returncode:
-  						print "youtube-dl seems to have failed. Error messages have been posted above. Please fix the errors and run the config script again."
-  						sys.exit(1)
-					filename_suffix = get_media_resolution(line); 
-					if(filename_suffix == ""):
-						filename_suffix = download_id
-					new_filename = newpath + "/" + mime_format + "/" + filename_suffix
-					os.rename(destination_filename, new_filename)
+					print "ERROR: Could not parse line " + line + " for mime format."
+					sys.exit(1)
+				mime_format = mime_prefix + "/" + mime_suffix
+				destination_filename = newpath + "/" + mime_format + "/" + download_id
+				download_command = "youtube-dl --fixup never -o " + destination_filename + " -f " + download_id + " " + youtube_url
+				print "Running command " + download_command + "......"
+				proc = subprocess.Popen(download_command, stdout=subprocess.PIPE, shell=True)
+				(out, err) = proc.communicate()
+				print out
+				if proc.returncode:
+					print "youtube-dl seems to have failed. Error messages have been posted above. Please fix the errors and run the config script again."
+					sys.exit(1)
+				filename_suffix = get_media_resolution(line); 
+				if(filename_suffix == ""):
+					filename_suffix = download_id
+				new_filename = newpath + "/" + mime_format + "/" + filename_suffix
+				os.rename(destination_filename, new_filename)
 
 # Standard boilerplate to call the main() function to begin
 # the program.
