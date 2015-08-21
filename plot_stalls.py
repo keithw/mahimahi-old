@@ -21,9 +21,9 @@ def main():
 	stall_data_file = open(stall_data_filename, 'w')
 	frame_list = list()
 	frame_set = set()
-	stall_dict = collections.defaultdict(lambda: 0.0)
+	stall_dict = collections.defaultdict(lambda: Decimal(0.0))
 	with open(stall_logfilename) as stall_logfile:
-		previous_render_call_time = 0.0
+		previous_render_call_time = Decimal(0.0)
 		previous_frame_presentation_time = ""
 		for line in stall_logfile:
 			match_object = re.search("RENDER CALL ON: ([0-9]+(?:\.[0-9]+)?)s TIME: (.+)", line)
@@ -37,7 +37,7 @@ def main():
 					previous_render_call_time = render_call_time
 					previous_frame_presentation_time = frame_presentation_time
 				if render_call_time - previous_render_call_time > 0.018: #render calls occur every 17milliseconds or so
-					stall_dict[previous_frame_presentation_time] = render_call_time - previous_render_call_time - 0.017
+					stall_dict[previous_frame_presentation_time] += render_call_time - previous_render_call_time - Decimal(0.017)
 					print("Stall length " + str(render_call_time - previous_render_call_time) + " at frame " + str(previous_frame_presentation_time) + "s", file=stall_data_file)
 				previous_render_call_time = render_call_time
 				previous_frame_presentation_time = frame_presentation_time
