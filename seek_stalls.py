@@ -37,7 +37,7 @@ def main():
 					previous_render_call_time = render_call_time
 					previous_frame_presentation_time = frame_presentation_time
 				if render_call_time - previous_render_call_time > 0.018: #render calls occur every 17milliseconds or so
-					stall_dict[previous_frame_presentation_time] = render_call_time - previous_render_call_time
+					stall_dict[previous_frame_presentation_time] = render_call_time - previous_render_call_time - 0.017
 					print("Stall length " + str(render_call_time - previous_render_call_time) + " at frame " + str(previous_frame_presentation_time) + "s before rendering frame " + str(frame_presentation_time) + "s at clock time " + str(previous_render_call_time), file=stall_data_file)
 				previous_render_call_time = render_call_time
 				previous_frame_presentation_time = frame_presentation_time
