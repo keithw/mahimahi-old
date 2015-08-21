@@ -81,6 +81,8 @@ def main():
 		os.makedirs("./media_files")
 	if not os.path.exists("./youtube_logs"):
 		os.makedirs("./youtube_logs")
+	if not os.path.exists("./youtube_stall_logs"):
+		os.makedirs("./youtube_stall_logs")
 	media_files_path =  os.path.dirname(os.path.realpath(__file__)) + "/media_files/" + video_id
 	saved_requests_path = os.path.dirname(os.path.realpath(__file__)) + "/saved_requests/" + video_id
 	print

@@ -50,3 +50,4 @@ synthetic_traces/*
 youtube_analysis_output/*
 *.mkv
 *.png
+*.txt
