@@ -91,7 +91,7 @@ def main():
 	print "Recorded session data will be saved in " + saved_requests_path
 	print "Checking for saved session data......"
 	print
-	mm_webrecord_command = "mm-webrecord " + saved_requests_path + " " + browser_command + " --start-maximized --ignore-certificate-errors --user-data-dir=/tmp/nonexistent$(date +%s%N) '" + url + "'"
+	mm_webrecord_command = "mm-webrecord " + saved_requests_path + " " + browser_command + " --ignore-certificate-errors --user-data-dir=/tmp/nonexistent$(date +%s%N) '" + url + "'"
 	if os.path.exists(saved_requests_path): 
 		should_run_mm_webrecord = get_yes_or_no("It appears as if you have already recorded session data for this video. Would you like to overwrite your previous recording? y/n  \n")
 	else:

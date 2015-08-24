@@ -58,7 +58,7 @@ def main():
 			proc = subprocess.Popen(bento_command, stdout=subprocess.PIPE, shell=True)
 		 	(out, err) = proc.communicate()
 		 	if proc.returncode:
-	  			print "The Bento tool seems to have failed. Please fix the errors and run the script again."
+	  			print("The Bento tool seems to have failed. Please fix the errors and run the script again.")
 	  			sys.exit(1)
 		mp4dump_filenames_list = get_media_filenames_list(output_index_path)
 		for mp4dump_filename in mp4dump_filenames_list:

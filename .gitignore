@@ -51,3 +51,5 @@ youtube_analysis_output/*
 *.mkv
 *.png
 *.txt
+*.zip
+*.tar
