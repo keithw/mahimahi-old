@@ -66,16 +66,16 @@ def main():
 	if url == "":
 		print "ERROR: No url provided. Please pass a valid YouTube url using --url='<insert url here>'."
 		sys.exit(1)
-	print(env_string)
-	env_array = env_string.split(" ")
-	env_var_re = "([A-Z_]+)=(.+)"
-	for env_var in env_array:
-		env_var_match_object = re.search(env_var_re, env_var)
-		if not env_var_match_object:
-			print "ERROR: Incorrectly formatted environment variable " + env_var + " in command line arguments."
-			sys.exit(1)
-		else:
-			os.environ[env_var_match_object.group(1)] = env_var_match_object.group(2)
+	if not env_string == "":
+		env_array = env_string.split(" ")
+		env_var_re = "([A-Z_]+)=(.+)"
+		for env_var in env_array:
+			env_var_match_object = re.search(env_var_re, env_var)
+			if not env_var_match_object:
+				print "ERROR: Incorrectly formatted environment variable " + env_var + " in command line arguments."
+				sys.exit(1)
+			else:
+				os.environ[env_var_match_object.group(1)] = env_var_match_object.group(2)
 	#Set the video id by parsing the embed YouTube url
 	if video_id == "":
 		match_object = re.search("/embed/([_a-zA-Z0-9\-]+)", url)
