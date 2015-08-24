@@ -29,11 +29,13 @@ def main():
 	browser_command_re = "--browser-command=(.+)"
 	mahimahi_options_re = "--mahimahi-options=(.+)"
 	url_re = "--url=(.+)"
+	env_string_re = "--env=(.+)"
 	for arg in sys.argv:
 		video_id_match_object = re.search(video_id_re, arg)
 		browser_command_match_object = re.search(browser_command_re, arg)
 		mahimahi_options_match_object = re.search(mahimahi_options_re, arg)
 		url_match_object = re.search(url_re, arg)
+		env_match_object = re.search(env_string_re, arg)
 		if video_id_match_object:
 			command_line_arguments["--video-id"] = video_id_match_object.group(1)
 		if browser_command_match_object:
@@ -42,11 +44,14 @@ def main():
 			command_line_arguments["--mahimahi-options"] = mahimahi_options_match_object.group(1)
 		if url_match_object:
 			command_line_arguments["--url"] = url_match_object.group(1)
+		if env_match_object:
+			command_line_arguments["--env"] = env_match_object.group(1)
 	#Configure default parameter values
 	video_id = ""
 	browser_command = "chromium-browser"
 	mahimahi_options = ""
 	url = ""
+	env_string = ""
 	#Set command line parameters if given
 	if "--video-id" in command_line_arguments:
 		video_id = command_line_arguments["--video-id"]
@@ -55,10 +60,22 @@ def main():
 	if "--mahimahi-options" in command_line_arguments:
 		mahimahi_options = command_line_arguments["--mahimahi-options"]
 	if "--url" in command_line_arguments:
-		url = command_line_arguments["--url"]		
+		url = command_line_arguments["--url"]
+	if "--env" in command_line_arguments:
+		env_string = command_line_arguments["--env"]
 	if url == "":
 		print "ERROR: No url provided. Please pass a valid YouTube url using --url='<insert url here>'."
 		sys.exit(1)
+	print(env_string)
+	env_array = env_string.split(" ")
+	env_var_re = "([A-Z_]+)=(.+)"
+	for env_var in env_array:
+		env_var_match_object = re.search(env_var_re, env_var)
+		if not env_var_match_object:
+			print "ERROR: Incorrectly formatted environment variable " + env_var + " in command line arguments."
+			sys.exit(1)
+		else:
+			os.environ[env_var_match_object.group(1)] = env_var_match_object.group(2)
 	#Set the video id by parsing the embed YouTube url
 	if video_id == "":
 		match_object = re.search("/embed/([_a-zA-Z0-9\-]+)", url)
@@ -88,11 +105,11 @@ def main():
 		print "ERROR: Please run python youtube_config.py " + url + " to correct this error "
 		print
 		sys.exit(1)
-	youtube_replay_command = "mm-youtubereplay " + saved_requests_path + " " + mahimahi_options + " " + browser_command + " --start-maximized --ignore-certificate-errors --user-data-dir=/tmp/nonexistent$(date +%s%N) '" + url + "' 2> ./youtube_stall_logs/render_logs.txt"
+	youtube_replay_command = "mm-youtubereplay " + saved_requests_path + " " + mahimahi_options + " " + browser_command + " --window-size=1920,1080 --ignore-certificate-errors --user-data-dir=/tmp/nonexistent$(date +%s%N) '" + url + "' 2> ./youtube_stall_logs/render_logs.txt"
 	print youtube_replay_command
 	print
 	if os.system(youtube_replay_command):
-		print "YouTube replay has failed. Try running sudo sysctl -w net.ipv4.ip_forward=1 if you have not done so already."
+		print "YouTube replay has failed. Try running sudo sysctl -w net.ipv4.ip_forward=1 if you have not done so already and make sure to check ./youtube_stall_logs/render_logs.txt for errors."
 		sys.exit(1)
 		
 
