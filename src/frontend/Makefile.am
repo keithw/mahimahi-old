@@ -32,7 +32,7 @@ mm_webrecord_LDADD = -lrt ../httpserver/libhttpserver.a ../http/libhttp.a ../pro
 mm_webrecord_LDFLAGS = -pthread
 
 bin_PROGRAMS += mm-webreplay
-mm_webreplay_SOURCES = replayshell.cc web_server.hh web_server.cc
+mm_webreplay_SOURCES = replayshell.cc web_server.hh web_server.cc common_replay_shell.hh common_replay_shell.cc
 mm_webreplay_LDADD = -lrt ../util/libutil.a ../http/libhttp.a ../protobufs/libhttprecordprotos.a $(protobuf_LIBS)
 mm_webreplay_LDFLAGS = -pthread
 
@@ -40,6 +40,16 @@ bin_PROGRAMS += nph-replayserver.cgi
 nph_replayserver_cgi_SOURCES = replayserver.cc
 nph_replayserver_cgi_LDADD = -lrt ../util/libutil.a ../http/libhttp.a ../protobufs/libhttprecordprotos.a $(protobuf_LIBS)
 nph_replayserver_cgi_LDFLAGS = -pthread
+
+bin_PROGRAMS += mm-youtubereplay
+mm_youtubereplay_SOURCES = youtubeshell.cc web_server.hh web_server.cc common_replay_shell.hh common_replay_shell.cc
+mm_youtubereplay_LDADD = -lrt ../util/libutil.a ../http/libhttp.a ../protobufs/libhttprecordprotos.a $(protobuf_LIBS)
+mm_youtubereplay_LDFLAGS = -pthread
+
+bin_PROGRAMS += nph-youtubeserver.cgi
+nph_youtubeserver_cgi_SOURCES = youtubeserver.cc
+nph_youtubeserver_cgi_LDADD = -lrt ../util/libutil.a ../http/libhttp.a ../protobufs/libhttprecordprotos.a $(protobuf_LIBS)
+nph_youtubeserver_cgi_LDFLAGS = -pthread
 
 install-exec-hook:
 	chown root $(DESTDIR)$(bindir)/mm-delay
@@ -56,3 +66,5 @@ install-exec-hook:
 	chmod u+s $(DESTDIR)$(bindir)/mm-webrecord
 	chown root $(DESTDIR)$(bindir)/mm-webreplay
 	chmod u+s $(DESTDIR)$(bindir)/mm-webreplay
+	chown root $(DESTDIR)$(bindir)/mm-youtubereplay
+	chmod u+s $(DESTDIR)$(bindir)/mm-youtubereplay

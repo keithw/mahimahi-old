@@ -17,7 +17,7 @@ private:
     bool moved_away_;
 
 public:
-    WebServer( const Address & addr, const std::string & working_directory, const std::string & record_path );
+    WebServer( const Address & addr, const std::string & working_directory, const std::string & record_path , bool isYoutubeServer);
     ~WebServer();
 
     /* ban copying */
