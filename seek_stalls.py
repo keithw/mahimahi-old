@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-# This script reads the log file from mm-youtubereplay (youtube_replay.py) 
+# This script reads the log file from mm-youtubereplay (youtube_replay.py)
 # and outputs stall data for the given video seek trial.
 
 # USAGE: python seek_stalls.py youtube_stall_logfile
@@ -10,7 +10,7 @@ import sys
 import re
 from decimal import *
 import pylab
-import matplotlib.pyplot as plt 
+import matplotlib.pyplot as plt
 import collections
 import os
 
@@ -30,7 +30,7 @@ def main():
 			if match_object:
 				render_call_time = Decimal(match_object.group(2))
 				frame_presentation_time = match_object.group(1)
-				if not frame_presentation_time in frame_set: 
+				if not frame_presentation_time in frame_set:
 					frame_list += [frame_presentation_time]
 					frame_set.add(frame_presentation_time)
 				if previous_render_call_time == 0:
@@ -41,8 +41,8 @@ def main():
 					print("Stall length " + str(render_call_time - previous_render_call_time) + " at frame " + str(previous_frame_presentation_time) + "s before rendering frame " + str(frame_presentation_time) + "s at clock time " + str(previous_render_call_time), file=stall_data_file)
 				previous_render_call_time = render_call_time
 				previous_frame_presentation_time = frame_presentation_time
-	
+
 
 if __name__ == '__main__':
   main()
-
+  

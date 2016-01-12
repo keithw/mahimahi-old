@@ -117,6 +117,9 @@ def main():
 		print "RUNNING mm-webrecord to record new session. Please play video when browser pops up and wait 20 seconds to save enough requests.\n"
 		print saved_requests_path
 		os.system("rm -rf " + saved_requests_path)
+		print
+		print mm_webrecord_command
+		print
 		if os.system(mm_webrecord_command):
 			print "mm-webrecord seems to have failed. Error messages have been posted above. Please fix the errors and run the config script again."
 			sys.exit(1)
