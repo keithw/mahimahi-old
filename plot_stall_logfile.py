@@ -19,8 +19,6 @@ import os
 def main():
     stall_logfilename = sys.argv[1]
     filename_match_object = re.search("youtube_stall_logs/(.+).txt", stall_logfilename)
-    stall_data_filename = "./youtube_stall_logs/" + filename_match_object.group(1) + "_stall_data.txt"
-    stall_data_file = open(stall_data_filename, 'w')
     frame_list = list()
     frame_set = set()
     stall_dict = collections.defaultdict(lambda: Decimal(0.0))
