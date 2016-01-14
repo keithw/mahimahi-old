@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-#Usage: python bulk_seek_stats.py youtube_logs_folder
+#Usage: python bulk_seek_stats.py youtube_logs_folder youtube_index_directory SSIM_index_directory output_directory
 
 from __future__ import print_function
 import matplotlib
@@ -89,16 +89,16 @@ def get_resolution_from_filename_sintel(index_filename):
     match_object = re.search("364", index_filename)
     if match_object:
         return "364"
-    match_object = re.search("272", index_filename)
+    match_object = re.search("274", index_filename)
     if match_object:
-        return "272"
+        return "274"
     match_object = re.search("182", index_filename)
     if match_object:
         return "182"
     match_object = re.search("110", index_filename)
     if match_object:
         return "110"
-    return -1
+    raise ValueError("Can't sintel filename " + index_filename)
 
 def get_full_track_name(index_filename):
     match_object = re.search("818", index_filename)
@@ -110,16 +110,16 @@ def get_full_track_name(index_filename):
     match_object = re.search("364", index_filename)
     if match_object:
         return "854x364"
-    match_object = re.search("272", index_filename)
+    match_object = re.search("274", index_filename)
     if match_object:
-        return "640x272"
+        return "640x274"
     match_object = re.search("182", index_filename)
     if match_object:
         return "426x182"
     match_object = re.search("110", index_filename)
     if match_object:
         return "256x110"
-    return -1
+    raise ValueError("Can't read track name from index filename " + index_filename)
 
 def get_plot_info(logfile_path):
     resolution_list = []
@@ -612,6 +612,8 @@ def get_SSIM_data(logfile_path, index, SSIM_dictionary, stall_logfile, trial_id,
 
 
 def main():
+    if len( sys.argv ) is not 5:
+        raise ValueError("Usage: python bulk_seek_stats.py youtube_logs_folder youtube_index_directory SSIM_index_directory output_directory")
     logs_folder = sys.argv[1]
     index_directory = sys.argv[2]
     SSIM_index_directory = sys.argv[3]
@@ -626,17 +628,20 @@ def main():
             files_list += [os.path.abspath(os.path.join(dirpath, f))]
     id_to_logfiles = collections.defaultdict(lambda: {})
     for filepath in files_list:
-        stall_logfile_match_object = re.search("stall-log-youtube-replays-(.+).txt", filepath)
+        stall_logfile_match_object = re.search("stall-log-(.+).txt", filepath)
         if stall_logfile_match_object:
             stall_logfile_match_id = stall_logfile_match_object.group(1)
             id_to_logfiles[stall_logfile_match_id]["stalls"] = filepath
         else:
-            quality_logfile_match_object = re.search("log-youtube-replays-(.+).txt", filepath)
+            quality_logfile_match_object = re.search("log-(.+).txt", filepath)
             if quality_logfile_match_object:
                 quality_logfile_id = quality_logfile_match_object.group(1)
                 id_to_logfiles[quality_logfile_id]["quality"] = filepath
     SSIM_dict = collections.defaultdict(lambda: (0.0, 0.0))
     means_list = list()
+    for trial_id in id_to_logfiles:
+        logfiles = id_to_logfiles[trial_id]
+        assert len(logfiles) is 2, "trial %s missing log files. Has: %s" % (trial_id, str(logfiles))
     for trial_id in id_to_logfiles:
         if os.path.exists(output_directory + "/" + trial_id):
             os.system("rm -rf " + output_directory + "/" + trial_id)
@@ -647,8 +652,10 @@ def main():
         stall_logfile = logfiles["stalls"]
         print("\tQuality logfile: " + quality_logfile)
         print("\tStall logfile: " + stall_logfile)
+        print ("getting ssim data..")
         (mean_SSIM, stddev_SSIM) = get_SSIM_data(quality_logfile, media_index, SSIM_dictionary, stall_logfile, trial_id, output_directory, time_last)
         SSIM_dict[trial_id] = (mean_SSIM, stddev_SSIM)
+        print ("getting stall data..")
         stalls_list = get_stall_data(stall_logfile, trial_id, output_directory)
         means_list += [mean_SSIM]
     SSIM_mean_stddev_output_filename = output_directory + "/mean_stddev_SSIM.txt"
