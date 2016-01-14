@@ -16,6 +16,8 @@
 from __future__ import print_function
 from matplotlib import collections
 import numpy as np
+import matplotlib
+matplotlib.use('pdf') # Must be before importing matplotlib.pyplot or pylab! Default uses x window manager and won't work cleanly in cloud installations.
 import pylab
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
@@ -469,7 +471,7 @@ def remove_overlapping_SSIM(SSIM_graph_dict, final_graph_dict):
 def main():
     logfile_path = sys.argv[1]
     output_filename = configure_file_system(logfile_path)
-    plot_resolution(logfile_path, output_filename + "resolution_requests.png")
+    plot_resolution(logfile_path, output_filename + "resolution_requests.pdf")
     plotTuple = get_plot_info(logfile_path)
     resolution_list = plotTuple[0]
     byte_range_list = plotTuple[1]
@@ -506,17 +508,17 @@ def main():
     final_graph_dict = get_merged_time_ranges(final_graph_dict)
     SSIM_dictionary = read_SSIM_index(SSIM_index_directory)
     SSIM_graph_dict = get_SSIM_graph_dict(final_graph_dict, SSIM_dictionary, index)
-    plot_resolution_lines(final_graph_dict, 0, time_last, output_filename + "data_requested_with_overlap.png")
+    plot_resolution_lines(final_graph_dict, 0, time_last, output_filename + "data_requested_with_overlap.pdf")
     frames_displayed = list(get_frames_displayed())
     frames_displayed.sort()
     time_ranges_displayed = time_ranges_from_frames_displayed(frames_displayed)
     final_graph_dict = trim_data_not_displayed(final_graph_dict, time_ranges_displayed)
-    plot_resolution_lines(final_graph_dict, 0, time_last, output_filename + "data_displayed_with_overlap.png")
+    plot_resolution_lines(final_graph_dict, 0, time_last, output_filename + "data_displayed_with_overlap.pdf")
     final_graph_dict = remove_overlap_from_streams(final_graph_dict)
-    plot_resolution_lines(final_graph_dict, 0, time_last, output_filename + "data_displayed_no_overlap.png")
+    plot_resolution_lines(final_graph_dict, 0, time_last, output_filename + "data_displayed_no_overlap.pdf")
     SSIM_graph_dict = remove_overlapping_SSIM(SSIM_graph_dict, final_graph_dict)
     print_mean_stddev_SSIM(SSIM_graph_dict,  output_filename + "stats.txt")
-    plot_SSIM_graph(SSIM_graph_dict, 0, time_last, output_filename + "SSIM.png")
+    plot_SSIM_graph(SSIM_graph_dict, 0, time_last, output_filename + "SSIM.pdf")
 
 if __name__ == '__main__':
   main()
