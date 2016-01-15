@@ -31,14 +31,14 @@ def get_extended_plot_info(logfile_path):
             time = re.search("([0-9]+):([0-9]+):([0-9]+)", line)
             byte_range = re.search("([0-9]+)-([0-9]+)", line)
             month_day = re.search("([A-Z][a-z]{2}) ([A-Z][a-z]{2})  ?([0-9]+)", line)
-            resolution_list += [resolution.group(1)]
+            resolution_list.append(resolution.group(1))
             time_sec = (int(month_day.group(3)) * 86400 + int(time.group(1)) * 3600 + int(time.group(2)) * 60 + int(time.group(3)))
-            time_list += [time_sec]
+            time_list.append(time_sec)
             if time_first == -1:
                 time_first = time_sec
             time_last = time_sec
             num_bytes = int(byte_range.group(2)) - int(byte_range.group(1))
-            num_bytes_list += [num_bytes]
+            num_bytes_list.append(num_bytes)
             if(num_bytes > most_bytes_requested):
                 most_bytes_requested = num_bytes
     return (resolution_list, time_list, num_bytes_list, time_first, time_last, most_bytes_requested)
@@ -53,8 +53,8 @@ def plot_resolution(logfile_path, output_filename):
     time_list_adjusted = []
     s = []
     for i in range(0, len(time_list)):
-        time_list_adjusted += [time_list[i] - time_first]
-        s += [5]
+        time_list_adjusted.append(time_list[i] - time_first)
+        s.append(5)
     plt.scatter(time_list_adjusted, resolution_list, s=s, color="blue")
     plt.xlabel('time of data request in seconds')
     plt.ylabel('resolution')
@@ -128,15 +128,15 @@ def get_plot_info(logfile_path):
         for line in f:
             resolution = re.search("[0-9]+x([0-9]+)", line)
             byte_range = re.search("([0-9]+-[0-9]+)", line)
-            resolution_list += [resolution.group(1)]
-            byte_range_list += [byte_range.group(1)]
+            resolution_list.append(resolution.group(1))
+            byte_range_list.append(byte_range.group(1))
     return (resolution_list, byte_range_list)
 
 def get_filenames_list(directory_path):
     filenames_list = []
     for dirpath,_,filenames in os.walk(directory_path):
         for f in filenames:
-            filenames_list += [os.path.abspath(os.path.join(dirpath, f))]
+            filenames_list.append(os.path.abspath(os.path.join(dirpath, f)))
     return filenames_list
 
 def get_time_range(byte_range, offset_list, time_last):
@@ -194,12 +194,12 @@ def merge_time_ranges(time_range_list):
             previous_range_start = previous_time_range[0]
             previous_range_end = previous_time_range[1]
         else:
-            merged_time_range_list += [previous_time_range]
+            merged_time_range_list.append(previous_time_range)
             previous_time_range = time_range
             previous_range_start = previous_time_range[0]
             previous_range_end = previous_time_range[1]
     if previous_range_start != -1 and previous_range_end != -1:
-        merged_time_range_list += [previous_time_range]
+        merged_time_range_list.append(previous_time_range)
     return merged_time_range_list
 
 def get_byte_range(time_range, time_byte_mapping):
@@ -226,7 +226,7 @@ def get_SSIM_scores_list(byte_range, SSIM_byte_mapping):
         else:
             within_range = False
         if within_range:
-            SSIM_scores += [mapping_tup[1]]
+            SSIM_scores.append(mapping_tup[1])
     return SSIM_scores
 
 def mean_stddev_SSIM(SSIM_graph_dict):
@@ -256,7 +256,7 @@ def read_SSIM_index(index_directory):
                 if match_object:
                     SSIM_score = match_object.group(1)
                     byte_offset = match_object.group(2)
-                    index[resolution] += [(byte_offset, SSIM_score)]
+                    index[resolution].append((byte_offset, SSIM_score))
     for resolution, index_tup in index.iteritems():
         index[resolution].sort(key=lambda tup: tup[0])
     return index
@@ -267,7 +267,7 @@ def get_SSIM_graph_dict(graph_dict, SSIM_dictionary, index):
         for time_range in time_range_list:
             byte_range = get_byte_range(time_range, index[resolution])
             SSIM_scores = get_SSIM_scores_list(byte_range, SSIM_dictionary[resolution])
-            SSIM_graph_dict[resolution] += [(time_range, SSIM_scores)]
+            SSIM_graph_dict[resolution].append((time_range, SSIM_scores))
     return SSIM_graph_dict
 
 def plot_SSIM_graph(SSIM_graph_dict, time_first, time_last, output_filename):
@@ -297,11 +297,11 @@ def plot_SSIM_graph(SSIM_graph_dict, time_first, time_last, output_filename):
                     ssim_sum += float(SSIM_scores[i])
                     num_ssim_scores += 1
             average_ssim_score = ssim_sum / float(num_ssim_scores)
-            SSIM_scores_data_points_list += [average_ssim_score]
-            time_data_points_list += [time_range_end]
+            SSIM_scores_data_points_list.append(average_ssim_score)
+            time_data_points_list.append(time_range_end)
             time_range_beg += SAMPLE_SIZE
             time_range_end += SAMPLE_SIZE
-            size_list += [0.25]
+            size_list.append(0.25)
     plt.scatter(time_data_points_list, SSIM_scores_data_points_list, color='Blue', s=size_list)
     plt.xlabel('time within video in seconds (with seeks)')
     plt.ylabel('SSIM score')
@@ -331,10 +331,10 @@ def time_ranges_from_frames_displayed(frames_displayed):
         presentation_time = float(presentation_time)
         if presentation_time - previous_presentation_time > 30.0:
             current_range_end = previous_presentation_time
-            time_ranges += [(current_range_start, current_range_end)]
+            time_ranges.append((current_range_start, current_range_end))
             current_range_start = presentation_time
         previous_presentation_time = presentation_time
-    time_ranges += [(current_range_start, previous_presentation_time)]
+    time_ranges.append((current_range_start, previous_presentation_time))
     return time_ranges
 
 def has_overlap(time_range1, time_range2):
@@ -353,7 +353,7 @@ def has_overlap(time_range1, time_range2):
 def get_overlap_list(time_range, time_ranges_displayed):
     overlap_list = []
     for time_range_displayed in time_ranges_displayed:
-        overlap_list += [has_overlap(time_range, time_range_displayed)]
+        overlap_list.append(has_overlap(time_range, time_range_displayed))
     return overlap_list
 
 def remove_overlap(time_range1, time_range2):
@@ -364,7 +364,7 @@ def trim_overlap(time_range, time_ranges_displayed):
     overlap_list = get_overlap_list(time_range, time_ranges_displayed)
     for i, has_overlap in enumerate(overlap_list):
         if has_overlap:
-            trimmed_time_ranges += [remove_overlap(time_range, time_ranges_displayed[i])]
+            trimmed_time_ranges.append(remove_overlap(time_range, time_ranges_displayed[i]))
     return trimmed_time_ranges
 
 def trim_data_not_displayed(final_graph_dict, time_ranges_displayed):
@@ -393,9 +393,9 @@ def higher_stream_wins(resolution1, resolution2, time_range1, time_range2):
         new_time_ranges = []
         overlap_region = (max(time_range1[0], time_range2[0]), min(time_range1[1], time_range2[1]))
         if time_range1[0] < overlap_region[0]:
-            new_time_ranges += [(resolution1, (time_range1[0], overlap_region[0]))]
+            new_time_ranges.append((resolution1, (time_range1[0], overlap_region[0])))
         if time_range1[1] > overlap_region[1]:
-            new_time_ranges += [(resolution1, (overlap_region[1], time_range1[1]))]
+            new_time_ranges.append((resolution1, (overlap_region[1], time_range1[1])))
         return new_time_ranges
 
 def remove_first_overlap(streams_list):
@@ -431,13 +431,13 @@ def remove_overlap_from_streams(final_graph_dict):
     streams_list = []
     for stream in final_graph_dict:
         for time_range in final_graph_dict[stream]:
-            streams_list += [(stream, time_range)]
+            streams_list.append((stream, time_range))
     streams_list.sort(key=lambda tup: tup[1][0])
     while(time_range_list_has_overlap(streams_list)):
         streams_list = remove_first_overlap(streams_list)
     for stream in streams_list:
         if stream[1][0] != -1:
-            final_graph_dict_without_overlap[stream[0]] += [stream[1]]
+            final_graph_dict_without_overlap[stream[0]].append(stream[1])
     return final_graph_dict_without_overlap
 
 def get_SSIMs_new_time_range(SSIM_dict, time_range):
@@ -448,7 +448,7 @@ def get_SSIMs_new_time_range(SSIM_dict, time_range):
         time = SSIM_tup[0]
         SSIM = SSIM_tup[1]
         if time > time_range_start and time < time_range_end:
-            SSIMs += [SSIM]
+            SSIMs.append(SSIM)
     return SSIMs
 
 
@@ -464,14 +464,14 @@ def remove_overlapping_SSIM(SSIM_graph_dict, final_graph_dict):
             counter = 0
             time_range_curr = time_range_start
             while(time_range_curr < time_range_end and counter < len(SSIMs)):
-                SSIM_dict[resolution] += [(time_range_curr, SSIMs[counter])]
+                SSIM_dict[resolution].append((time_range_curr, SSIMs[counter]))
                 time_range_curr = time_range_curr + secs_per_frame
                 counter = counter + 1
     SSIM_graph_dict_without_overlap = collections.defaultdict(lambda: list())
     for resolution in final_graph_dict:
         for time_range in final_graph_dict[resolution]:
             SSIMs = get_SSIMs_new_time_range(SSIM_dict[resolution], time_range)
-            SSIM_graph_dict_without_overlap[resolution] += [(time_range, SSIMs)]
+            SSIM_graph_dict_without_overlap[resolution].append((time_range, SSIMs))
     return SSIM_graph_dict_without_overlap
 
 def get_stall_data(stall_logfilename, trial_id, output_directory):
@@ -490,19 +490,19 @@ def get_stall_data(stall_logfilename, trial_id, output_directory):
                 render_call_time = Decimal(match_object.group(2))
                 frame_presentation_time = match_object.group(1)
                 if not frame_presentation_time in frame_set:
-                    frame_list += [frame_presentation_time]
+                    frame_list.append(frame_presentation_time)
                     frame_set.add(frame_presentation_time)
                 if previous_render_call_time == 0:
                     previous_render_call_time = render_call_time
                     previous_frame_presentation_time = frame_presentation_time
                 if render_call_time - previous_render_call_time > 0.018: #render calls occur every 17milliseconds or so
                     stall_dict[previous_frame_presentation_time] += render_call_time - previous_render_call_time - Decimal(0.017)
-                    stall_length_list += [render_call_time - previous_render_call_time]
-                    stall_presentation_time += [Decimal(frame_presentation_time)]
-                    stall_list += [(render_call_time - previous_render_call_time, Decimal(frame_presentation_time))]
+                    stall_length_list.append(render_call_time - previous_render_call_time)
+                    stall_presentation_time.append(Decimal(frame_presentation_time))
+                    stall_list.append((render_call_time - previous_render_call_time, Decimal(frame_presentation_time)))
                 else:
-                    stall_length_list += [0]
-                    stall_presentation_time += [Decimal(frame_presentation_time)]
+                    stall_length_list.append(0)
+                    stall_presentation_time.append(Decimal(frame_presentation_time))
                 previous_render_call_time = render_call_time
                 previous_frame_presentation_time = frame_presentation_time
     previous_time = 0
@@ -513,8 +513,8 @@ def get_stall_data(stall_logfilename, trial_id, output_directory):
             plt.plot(previous_time_so_far, length_list_so_far, color="blue")
             previous_time_so_far = list()
             length_list_so_far = list()
-        previous_time_so_far += [time]
-        length_list_so_far += [stall_length_list[i]]
+        previous_time_so_far.append(time)
+        length_list_so_far.append(stall_length_list[i])
         previous_time = time
     plt.plot(previous_time_so_far, length_list_so_far, color="blue")
     plt.xlabel('Time in video (seconds)')
@@ -559,7 +559,7 @@ def get_media_index(index_directory):
     for filename in all_files:
         match_object = re.search("[0-9]+x[0-9]+_index", filename)
         if match_object:
-            index_filenames += [filename]
+            index_filenames.append(filename)
     time_last = -1
     index = collections.defaultdict(lambda: list()) #dictionary from resolution to sorted list of tuples (byte offset, time offset)
     for index_filename in index_filenames:
@@ -625,7 +625,7 @@ def main():
     files_list = list()
     for dirpath,_,filenames in os.walk(logs_folder):
         for f in filenames:
-            files_list += [os.path.abspath(os.path.join(dirpath, f))]
+            files_list.append(os.path.abspath(os.path.join(dirpath, f)))
     id_to_logfiles = collections.defaultdict(lambda: {})
     for filepath in files_list:
         stall_logfile_match_object = re.search("stall-log-(.+).txt", filepath)
@@ -657,7 +657,7 @@ def main():
         SSIM_dict[trial_id] = (mean_SSIM, stddev_SSIM)
         print ("getting stall data..")
         stalls_list = get_stall_data(stall_logfile, trial_id, output_directory)
-        means_list += [mean_SSIM]
+        means_list.append(mean_SSIM)
     SSIM_mean_stddev_output_filename = output_directory + "/mean_stddev_SSIM.txt"
     SSIM_mean_stddev_output_file = open(SSIM_mean_stddev_output_filename, 'w')
     num_means = len(means_list)
