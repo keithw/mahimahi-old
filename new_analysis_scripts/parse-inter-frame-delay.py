@@ -11,8 +11,8 @@ from decimal import *
 
 # map takes only one argument so use a three-tuple as input
 def get_inter_frame_delay((stall_logfilename, trial_id, output_directory)):
-    with open(output_directory + "/" + trial_id + "/" + "inter-frame-delay.dat", 'w') as inter_frame_delay_file:
-        with open(output_directory + "/" + trial_id + "/" + "resumes-delay.dat", 'w') as resumes_delay_file:
+    with open(output_directory + "/" + trial_id + "/" + "inter-frame-delays.dat", 'w') as inter_frame_delay_file:
+        with open(output_directory + "/" + trial_id + "/" + "resume-delays.dat", 'w') as resumes_delay_file:
             with open(stall_logfilename) as stall_logfile:
                 previous_render_call_time = Decimal(0.0)
                 previous_time_in_video = 0.0
