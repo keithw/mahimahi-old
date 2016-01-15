@@ -181,25 +181,20 @@ def merge_time_ranges(time_range_list):
     merged_time_range_list = []
     previous_range_start = -1
     previous_range_end = -1
-    previous_time_range = (previous_range_start, previous_range_end)
-    for time_range in time_range_list:
-        range_start = time_range[0]
-        range_end = time_range[1]
+    for (range_start, range_end) in time_range_list:
         if previous_range_start == -1 or previous_range_end == -1:
             previous_range_start = range_start
             previous_range_end = range_end
-            previous_time_range = (previous_range_start, previous_range_end)
         elif previous_range_end >= range_start:
-            previous_time_range = (min(previous_range_start, range_start), max(previous_range_end, range_end))
-            previous_range_start = previous_time_range[0]
-            previous_range_end = previous_time_range[1]
+            previous_range_start = min(previous_range_start, range_start)
+            previous_range_end = max(previous_range_end, range_end)
         else:
-            merged_time_range_list.append(previous_time_range)
-            previous_time_range = time_range
-            previous_range_start = previous_time_range[0]
-            previous_range_end = previous_time_range[1]
+            merged_time_range_list.append((previous_range_start, previous_range_end))
+            previous_range_start = range_start
+            previous_range_end = range_end
+
     if previous_range_start != -1 and previous_range_end != -1:
-        merged_time_range_list.append(previous_time_range)
+        merged_time_range_list.append((previous_range_start, previous_range_end))
     return merged_time_range_list
 
 def get_byte_range(time_range, time_byte_mapping):
