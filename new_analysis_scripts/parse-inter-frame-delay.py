@@ -30,8 +30,9 @@ def main():
         raise ValueError("Usage: python parse-inter-frame-delay.py youtube_logs_folder output_directory")
     logs_folder = sys.argv[1]
     output_directory = sys.argv[2]
-    if not os.path.exists(output_directory):
-        os.system("mkdir " + output_directory)
+    if os.path.exists(output_directory):
+        os.system("rm -rf " + output_directory)
+    os.system("mkdir " + output_directory)
 
     args_list = []
     for dirpath,_,filenames in os.walk(logs_folder):
@@ -41,8 +42,6 @@ def main():
             if match_object:
                 trial_id = match_object.group(1)
                 # TODO maybe don't delete existing directory here
-                if os.path.exists(output_directory + "/" + trial_id):
-                    os.system("rm -rf " + output_directory + "/" + trial_id)
                 os.system("mkdir " + output_directory + "/" + trial_id)
                 args_list.append((filepath, trial_id, output_directory))
 
