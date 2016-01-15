@@ -14,17 +14,15 @@ def get_inter_frame_delay((stall_logfilename, trial_id, output_directory)):
     with open(output_directory + "/" + trial_id + "/" + "inter-frame-delay.dat", 'w') as output_data_file:
         with open(stall_logfilename) as stall_logfile:
             previous_render_call_time = Decimal(0.0)
-            previous_frame_presentation_time = ""
             for line in stall_logfile:
                 match_object = re.search("RENDER CALL ON: ([0-9]+(?:\.[0-9]+)?)s TIME: (.+)", line)
                 if match_object:
                     render_call_time = Decimal(match_object.group(2))
-                    frame_presentation_time = match_object.group(1)
+                    #frame_presentation_time = match_object.group(1)
                     if previous_render_call_time != 0:
                         print(render_call_time - previous_render_call_time, file=output_data_file)
 
                     previous_render_call_time = render_call_time
-                    previous_frame_presentation_time = frame_presentation_time
             print("Finished parsing id " + trial_id)
  
 def main():
