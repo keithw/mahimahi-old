@@ -208,6 +208,8 @@ def get_byte_range(time_range, time_byte_mapping):
         if time_end == mapping_tup[1]:
             bytes_end = mapping_tup[0]
             break
+    assert bytes_start is not -1
+    assert bytes_end is not -1
     return (bytes_start, bytes_end)
 
 def get_SSIM_scores_list(byte_range, SSIM_byte_mapping):
@@ -455,6 +457,7 @@ def remove_overlapping_SSIM(SSIM_graph_dict, final_graph_dict):
             SSIMs = time_range_SSIM_tup[1]
             time_range_start = time_range[0]
             time_range_end = time_range[1]
+            assert len(SSIMs) is not 0
             secs_per_frame = (time_range_end - time_range_start) / len(SSIMs)
             counter = 0
             time_range_curr = time_range_start
