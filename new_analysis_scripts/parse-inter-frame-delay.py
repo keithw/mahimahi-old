@@ -23,11 +23,11 @@ def get_inter_frame_delay((stall_logfilename, trial_id, output_directory)):
                         print(render_call_time - previous_render_call_time, file=output_data_file)
 
                     previous_render_call_time = render_call_time
-            print("Finished parsing id " + trial_id)
+            print("Finished parsing " + trial_id)
  
 def main():
     if len( sys.argv ) is not 3:
-        raise ValueError("Usage: python inter-frame-delay.py youtube_logs_folder output_directory")
+        raise ValueError("Usage: python parse-inter-frame-delay.py youtube_logs_folder output_directory")
     logs_folder = sys.argv[1]
     output_directory = sys.argv[2]
     if not os.path.exists(output_directory):
@@ -48,6 +48,8 @@ def main():
 
     if len(args_list) is 0:
         print("No stall-log files found in " + logs_folder)
+    else:
+        print("Processing " + str(len(args_list)) + " stall log files...")
 
     # Use process pool to parallelize calling get_inter_frame_delay
     Pool(processes=multiprocessing.cpu_count()).map(get_inter_frame_delay, args_list)
