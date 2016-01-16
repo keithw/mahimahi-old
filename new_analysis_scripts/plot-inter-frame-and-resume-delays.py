@@ -37,19 +37,21 @@ def main():
                     for line in resume_delay_logfile:
                         resume_delays_list.append(float(line))
 
-    plt.plot(inter_frame_delays_list, color="blue")
+    # TODO make CDF of inter_frame_delays_list
+    #plt.plot(inter_frame_delays_list, color="blue")
     #plt.xlabel('Time in video (seconds)')
     #plt.ylabel('Stall duration (seconds)')
     #plt.ylim([-2, 20])
     #plt.xlim([-30, 920])
-    plt.savefig("inter-frame-delays-cdf.pdf")
+    #plt.savefig("inter-frame-delays-cdf.pdf")
 
-    plt.plot(resume_delays_list, color="blue")
+    # TODO make CDF of resume_delays_list
+    #plt.plot(resume_delays_list, color="blue")
     #plt.xlabel('Time in video (seconds)')
     #plt.ylabel('Stall duration (seconds)')
     #plt.ylim([-2, 20])
     #plt.xlim([-30, 920])
-    plt.savefig("resume-delays-cdf.pdf")
+    #plt.savefig("resume-delays-cdf.pdf")
 
 if __name__ == '__main__':
   main()
