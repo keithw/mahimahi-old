@@ -497,10 +497,11 @@ def get_stall_data(stall_logfilename, trial_id, output_directory):
                     previous_render_call_time = render_call_time
                     previous_frame_presentation_time = frame_presentation_time
                 if render_call_time - previous_render_call_time > 0.018: #render calls occur every 17milliseconds or so
-                    stall_dict[previous_frame_presentation_time] += render_call_time - previous_render_call_time - Decimal(0.017)
-                    stall_length_list.append(render_call_time - previous_render_call_time)
+                    stall_length = render_call_time - previous_render_call_time - Decimal(0.017)
+                    stall_dict[previous_frame_presentation_time] += stall_length
+                    stall_length_list.append(stall_length)
                     stall_presentation_time.append(Decimal(frame_presentation_time))
-                    stall_list.append((render_call_time - previous_render_call_time, Decimal(frame_presentation_time)))
+                    stall_list.append((stall_length, Decimal(frame_presentation_time)))
                 else:
                     stall_length_list.append(0)
                     stall_presentation_time.append(Decimal(frame_presentation_time))
