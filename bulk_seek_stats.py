@@ -226,21 +226,25 @@ def get_SSIM_scores_list(byte_range, SSIM_byte_mapping):
             SSIM_scores.append(mapping_tup[1])
     return SSIM_scores
 
-def mean_stddev_SSIM(SSIM_graph_dict):
+def mean_stddev(list_of_values):
+    num_values = len(list_of_values)
+    sum_values = 0.0
+    for value in list_of_values:
+        sum_values += float(value)
+    mean = sum_values / num_values
+    sum_square_error = 0.0
+    for value in list_of_values:
+        sum_square_error += math.pow(float(value) - mean, 2)
+    stddev = math.sqrt(sum_square_error / num_values)
+    return (mean, stddev)
+
+def mean_stddev_min_SSIM(SSIM_graph_dict):
     SSIM_scores_data_points_list = list()
     for resolution,time_ssim_mapping_list in SSIM_graph_dict.iteritems():
         for time_range_ssim_tup in time_ssim_mapping_list:
             SSIM_scores_data_points_list += time_range_ssim_tup[1]
-    num_ssim_scores = len(SSIM_scores_data_points_list)
-    sum_ssim_scores = 0.0
-    for ssim_score in SSIM_scores_data_points_list:
-        sum_ssim_scores += float(ssim_score)
-    ssim_mean = sum_ssim_scores/num_ssim_scores
-    sum_ssim_mean_square_error = 0.0
-    for ssim_score in SSIM_scores_data_points_list:
-        sum_ssim_mean_square_error += math.pow(float(ssim_score) - ssim_mean, 2)
-    stddev = math.sqrt(sum_ssim_mean_square_error / num_ssim_scores)
-    return (ssim_mean, stddev)
+    (ssim_mean, ssim_stddev) = mean_stddev(SSIM_scores_data_points_list)
+    return (ssim_mean, ssim_stddev, min(SSIM_scores_data_points_list))
 
 def read_SSIM_index(index_directory):
     index = collections.defaultdict(lambda: list())
@@ -448,7 +452,6 @@ def get_SSIMs_new_time_range(SSIM_dict, time_range):
             SSIMs.append(SSIM)
     return SSIMs
 
-
 def remove_overlapping_SSIM(SSIM_graph_dict, final_graph_dict):
     SSIM_dict = collections.defaultdict(lambda: list())
     for resolution in SSIM_graph_dict:
@@ -601,13 +604,12 @@ def get_SSIM_data(logfile_path, index, SSIM_dictionary, stall_logfile, trial_id,
     SSIM_graph_dict = remove_overlapping_SSIM(SSIM_graph_dict, final_graph_dict)
     plot_SSIM_graph(SSIM_graph_dict, 0, time_last, output_directory + "/" + trial_id + "/" + "SSIM_to_media_time_no_overlap.pdf")
     print_SSIM_dict(SSIM_graph_dict, output_directory, trial_id)
-    (mean_SSIM, stddev_SSIM) = mean_stddev_SSIM(SSIM_graph_dict)
+    (mean_SSIM, stddev_SSIM, min_SSIM) = mean_stddev_min_SSIM(SSIM_graph_dict)
     stats_filename = output_directory + "/" + trial_id + "/" + "stats.txt"
     stats_file = open(stats_filename, 'w')
     print("Mean SSIM score: " + str(mean_SSIM), file=stats_file)
     print("Standard Deviation of SSIM scores: " + str(stddev_SSIM), file=stats_file)
-    return (mean_SSIM, stddev_SSIM)
-
+    return (mean_SSIM, stddev_SSIM, min_SSIM)
 
 def main():
     if len( sys.argv ) is not 5:
@@ -636,7 +638,8 @@ def main():
                 quality_logfile_id = quality_logfile_match_object.group(1)
                 id_to_logfiles[quality_logfile_id]["quality"] = filepath
     SSIM_dict = collections.defaultdict(lambda: (0.0, 0.0))
-    means_list = list()
+    mean_SSIM_list = list()
+    min_SSIM_list = list()
     for trial_id in id_to_logfiles:
         logfiles = id_to_logfiles[trial_id]
         assert len(logfiles) is 2, "trial %s missing log files. Has: %s" % (trial_id, str(logfiles))
@@ -650,29 +653,26 @@ def main():
         stall_logfile = logfiles["stalls"]
         print("\tQuality logfile: " + quality_logfile)
         print("\tStall logfile: " + stall_logfile)
-        print ("getting ssim data..")
-        (mean_SSIM, stddev_SSIM) = get_SSIM_data(quality_logfile, media_index, SSIM_dictionary, stall_logfile, trial_id, output_directory, time_last)
-        SSIM_dict[trial_id] = (mean_SSIM, stddev_SSIM)
-        print ("getting stall data..")
+        print ("Getting ssim data..")
+        (mean_SSIM, stddev_SSIM, min_SSIM) = get_SSIM_data(quality_logfile, media_index, SSIM_dictionary, stall_logfile, trial_id, output_directory, time_last)
+        SSIM_dict[trial_id] = (mean_SSIM, stddev_SSIM, min_SSIM)
+        print ("Getting stall data..")
         stalls_list = get_stall_data(stall_logfile, trial_id, output_directory)
-        means_list.append(mean_SSIM)
+        mean_SSIM_list.append(mean_SSIM)
+        min_SSIM_list.append(min_SSIM)
     SSIM_mean_stddev_output_filename = output_directory + "/mean_stddev_SSIM.txt"
     SSIM_mean_stddev_output_file = open(SSIM_mean_stddev_output_filename, 'w')
-    num_means = len(means_list)
-    sum_means = 0.0
-    for mean in means_list:
-        sum_means += float(mean)
-    mean_of_means = sum_means / num_means
-    sum_means_square_error = 0.0
-    for mean in means_list:
-        sum_means_square_error += math.pow(float(mean) - mean_of_means, 2)
-    stddev_across_means = math.sqrt(sum_means_square_error / num_means)
-    print("Standard Deviation Across SSIM Means: " + str(stddev_across_means), file=SSIM_mean_stddev_output_file)
+    (mean_of_mean_SSIM, stddev_across_mean_SSIM) = mean_stddev(mean_SSIM_list)
+    print("Standard Deviation Across SSIM Means: " + str(stddev_across_mean_SSIM), file=SSIM_mean_stddev_output_file)
+    (mean_of_min_SSIM, stddev_across_min_SSIM) = mean_stddev(min_SSIM_list)
+    print("Mean Across Minimum SSIMs: " + str(mean_of_min_SSIM), file=SSIM_mean_stddev_output_file)
+    print("Standard Deviation Across Minimum SSIMs: " + str(stddev_across_min_SSIM), file=SSIM_mean_stddev_output_file)
     for trial_id in SSIM_dict:
         print("Trial " + trial_id + ":", file=SSIM_mean_stddev_output_file)
-        (mean_SSIM, stddev_SSIM) = SSIM_dict[trial_id]
+        (mean_SSIM, stddev_SSIM, min_SSIM) = SSIM_dict[trial_id]
         print("\tMean SSIM: " + str(mean_SSIM), file=SSIM_mean_stddev_output_file)
         print("\tStdDev SSIM: " + str(stddev_SSIM), file=SSIM_mean_stddev_output_file)
+        print("\tMinimum SSIM: " + str(min_SSIM), file=SSIM_mean_stddev_output_file)
 
 
 
