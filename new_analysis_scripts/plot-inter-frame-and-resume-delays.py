@@ -35,23 +35,26 @@ def main():
                 print("parsing " + filepath)
                 with open(filepath) as resume_delay_logfile:
                     for line in resume_delay_logfile:
-                        resume_delays_list.append(float(line))
+                        resume_delays_list.append(Decimal(line))
 
-    # TODO make CDF of inter_frame_delays_list
-    #plt.plot(inter_frame_delays_list, color="blue")
-    #plt.xlabel('Time in video (seconds)')
-    #plt.ylabel('Stall duration (seconds)')
-    #plt.ylim([-2, 20])
-    #plt.xlim([-30, 920])
-    #plt.savefig("inter-frame-delays-cdf.pdf")
+    sorted_vals = np.sort( inter_frame_delays_list )
+    yvals = np.arange(len(sorted_vals))/float(len(sorted_vals))
+    plt.plot( sorted_vals, yvals )
 
-    # TODO make CDF of resume_delays_list
-    #plt.plot(resume_delays_list, color="blue")
-    #plt.xlabel('Time in video (seconds)')
-    #plt.ylabel('Stall duration (seconds)')
-    #plt.ylim([-2, 20])
-    #plt.xlim([-30, 920])
-    #plt.savefig("resume-delays-cdf.pdf")
+    plt.title("CDF of all inter-frame delays")
+    plt.xscale('log')
+    plt.xlabel('Inter-frame delays (seconds)')
+    print("Writing inter-frame-delays-cdf.pdf..")
+    plt.savefig("inter-frame-delays-cdf.pdf")
+    plt.clf()
+
+    sorted_vals = np.sort( resume_delays_list )
+    yvals = np.arange(len(sorted_vals))/float(len(sorted_vals))
+    plt.plot( sorted_vals, yvals )
+    plt.title("CDF of seek delays")
+    plt.xlabel('Resume duration (seconds)')
+    print("Writing resume-delays-cdf.pdf..")
+    plt.savefig("resume-delays-cdf.pdf")
 
 if __name__ == '__main__':
   main()
