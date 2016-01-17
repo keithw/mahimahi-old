@@ -8,7 +8,7 @@ import collections
 import pprint
 import math
 from decimal import *
-getcontext().prec = 6 #the precision of our syscall
+getcontext().prec = 6 # the precision of our get time syscall
 
 # map takes only one argument so use a three-tuple as input
 def get_inter_frame_delay((stall_logfilename, trial_id, output_directory)):
