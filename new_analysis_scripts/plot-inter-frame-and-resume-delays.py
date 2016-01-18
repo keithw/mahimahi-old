@@ -39,14 +39,16 @@ def main():
                         resume_delays_list.append(float(line))
 
     sorted_vals = np.sort( inter_frame_delays_list )
-    yvals = np.arange(len(sorted_vals))/float(len(sorted_vals))
+    yvals = 1-(np.arange(len(sorted_vals))/float(len(sorted_vals)))
     plt.plot( sorted_vals, yvals )
 
-    plt.title("CDF of all inter-frame delays for " + dataset_title +" ("+ str(len(sorted_vals))+" datapoints)")
+    plt.title("CCDF of all inter-frame delays for " + dataset_title +" ("+ str(len(sorted_vals))+" datapoints)")
     plt.xscale('log')
     plt.xlabel('Inter-frame delay (seconds)')
-    print("Writing " + dataset_title +"-inter-frame-delays-cdf.pdf..")
-    plt.savefig(dataset_title+"-inter-frame-delays-cdf.pdf")
+    plt.yscale('log')
+    filename = dataset_title + "-inter-frame-delays-ccdf.pdf"
+    print("Writing " + filename +"..")
+    plt.savefig(filename)
     plt.clf()
 
     sorted_vals = np.sort( resume_delays_list )
@@ -54,8 +56,9 @@ def main():
     plt.plot( sorted_vals, yvals )
     plt.title("CDF of seek delays for " + dataset_title +" ("+ str(len(sorted_vals))+" datapoints)")
     plt.xlabel('Resume duration (seconds)')
-    print("Writing " + dataset_title +"-resume-delays-cdf.pdf..")
-    plt.savefig(dataset_title+"-resume-delays-cdf.pdf")
+    filename = dataset_title + "-resume-delays-cdf.pdf"
+    print("Writing " + filename +"..")
+    plt.savefig(filename)
 
 if __name__ == '__main__':
   main()
