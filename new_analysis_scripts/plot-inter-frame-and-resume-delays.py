@@ -28,14 +28,14 @@ def main():
                 print("parsing " + filepath)
                 with open(filepath) as delay_logfile:
                     for line in delay_logfile:
-                        inter_frame_delays_list.append(Decimal(line))
+                        inter_frame_delays_list.append(float(line))
 
             match_object = re.search("resume-delays.dat", filepath)
             if match_object:
                 print("parsing " + filepath)
                 with open(filepath) as resume_delay_logfile:
                     for line in resume_delay_logfile:
-                        resume_delays_list.append(Decimal(line))
+                        resume_delays_list.append(float(line))
 
     sorted_vals = np.sort( inter_frame_delays_list )
     yvals = np.arange(len(sorted_vals))/float(len(sorted_vals))
