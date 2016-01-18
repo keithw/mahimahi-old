@@ -21,6 +21,7 @@ def main():
 
     inter_frame_delays_list = []
     resume_delays_list = []
+    rebuffering_ratios = []
     for dirpath,_,filenames in os.walk(delay_logs_folder):
         for f in filenames:
             filepath = os.path.abspath(os.path.join(dirpath, f))
@@ -28,8 +29,15 @@ def main():
             if match_object: # change this to simpler match
                 print("parsing " + filepath)
                 with open(filepath) as delay_logfile:
+                    total_playback_time = 0.0
+                    rebuffering_time = 0.0
                     for line in delay_logfile:
-                        inter_frame_delays_list.append(float(line))
+                        inter_frame_delay = float(line)
+                        inter_frame_delays_list.append(inter_frame_delay)
+                        total_playback_time += inter_frame_delay
+                        if inter_frame_delay > .1:
+                            rebuffering_time += inter_frame_delay
+                rebuffering_ratios.append(rebuffering_time / total_playback_time)
 
             match_object = re.search("resume-delays.dat", filepath)
             if match_object:
@@ -59,6 +67,18 @@ def main():
     filename = dataset_title + "-resume-delays-cdf.pdf"
     print("Writing " + filename +"..")
     plt.savefig(filename)
+    plt.clf()
+
+    sorted_vals = np.sort( rebuffering_ratios )
+    #TODO FIX yvals for all CDFs so it always ends with 1
+    yvals = np.arange(len(sorted_vals))/float(len(sorted_vals))
+    plt.plot( sorted_vals, yvals )
+    plt.title("CDF rebuffering ratios for " + dataset_title +" ("+ str(len(sorted_vals))+" runs)")
+    plt.xlabel('Rebuffering ratio')
+    filename = dataset_title + "-rebuffering-ratios-cdf.pdf"
+    print("Writing " + filename +"..")
+    plt.savefig(filename)
+    plt.clf()
 
 if __name__ == '__main__':
   main()
