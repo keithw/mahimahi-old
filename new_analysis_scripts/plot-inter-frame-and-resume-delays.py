@@ -41,7 +41,7 @@ def main():
     yvals = np.arange(len(sorted_vals))/float(len(sorted_vals))
     plt.plot( sorted_vals, yvals )
 
-    plt.title("CDF of all inter-frame delays")
+    plt.title("CDF of all inter-frame delays ("+ str(len(sorted_vals))+" datapoints)")
     plt.xscale('log')
     plt.xlabel('Inter-frame delay (seconds)')
     print("Writing inter-frame-delays-cdf.pdf..")
@@ -51,7 +51,7 @@ def main():
     sorted_vals = np.sort( resume_delays_list )
     yvals = np.arange(len(sorted_vals))/float(len(sorted_vals))
     plt.plot( sorted_vals, yvals )
-    plt.title("CDF of seek delays")
+    plt.title("CDF of seek delays ("+ str(len(sorted_vals))+" datapoints)")
     plt.xlabel('Resume duration (seconds)')
     print("Writing resume-delays-cdf.pdf..")
     plt.savefig("resume-delays-cdf.pdf")
