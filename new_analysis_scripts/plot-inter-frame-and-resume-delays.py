@@ -43,7 +43,7 @@ def main():
 
     plt.title("CDF of all inter-frame delays")
     plt.xscale('log')
-    plt.xlabel('Inter-frame delays (seconds)')
+    plt.xlabel('Inter-frame delay (seconds)')
     print("Writing inter-frame-delays-cdf.pdf..")
     plt.savefig("inter-frame-delays-cdf.pdf")
     plt.clf()
