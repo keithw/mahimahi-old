@@ -30,7 +30,7 @@ def get_inter_frame_delay((stall_logfilename, trial_id, output_directory)):
                     time_in_video_of_frame_rendered = float(match_object.group(1))
 
                     if time_in_video_of_frame_rendered != time_in_video_of_last_frame: # We are rendering a new frame
-                        inter_frame_delay_time = system_time_of_render_call - first_render_time_of_last_frame - (Decimal(1) / Decimal(60))
+                        inter_frame_delay_time = system_time_of_render_call - first_render_time_of_last_frame
                         print(inter_frame_delay_time, file=inter_frame_delay_file)
 
                         if (time_in_video_of_frame_rendered - time_in_video_of_last_frame) > 1: # assume seek if video jumps >1 s
