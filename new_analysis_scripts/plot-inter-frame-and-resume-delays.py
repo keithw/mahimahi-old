@@ -14,9 +14,10 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
  
 def main():
-    if len( sys.argv ) is not 2:
-        raise ValueError("Usage: python plot-inter-frame-delay.py inter-frame-delay-directory")
+    if len( sys.argv ) is not 3:
+        raise ValueError("Usage: python plot-inter-frame-delay.py inter-frame-delay-directory dataset-title")
     delay_logs_folder = sys.argv[1]
+    dataset_title = sys.argv[2]
 
     inter_frame_delays_list = []
     resume_delays_list = []
@@ -41,20 +42,20 @@ def main():
     yvals = np.arange(len(sorted_vals))/float(len(sorted_vals))
     plt.plot( sorted_vals, yvals )
 
-    plt.title("CDF of all inter-frame delays ("+ str(len(sorted_vals))+" datapoints)")
+    plt.title("CDF of all inter-frame delays for " + dataset_title +" ("+ str(len(sorted_vals))+" datapoints)")
     plt.xscale('log')
     plt.xlabel('Inter-frame delay (seconds)')
-    print("Writing inter-frame-delays-cdf.pdf..")
-    plt.savefig("inter-frame-delays-cdf.pdf")
+    print("Writing " + dataset_title +"-inter-frame-delays-cdf.pdf..")
+    plt.savefig(dataset_title+"-inter-frame-delays-cdf.pdf")
     plt.clf()
 
     sorted_vals = np.sort( resume_delays_list )
     yvals = np.arange(len(sorted_vals))/float(len(sorted_vals))
     plt.plot( sorted_vals, yvals )
-    plt.title("CDF of seek delays ("+ str(len(sorted_vals))+" datapoints)")
+    plt.title("CDF of seek delays for " + dataset_title +" ("+ str(len(sorted_vals))+" datapoints)")
     plt.xlabel('Resume duration (seconds)')
-    print("Writing resume-delays-cdf.pdf..")
-    plt.savefig("resume-delays-cdf.pdf")
+    print("Writing " + dataset_title +"-resume-delays-cdf.pdf..")
+    plt.savefig(dataset_title+"-resume-delays-cdf.pdf")
 
 if __name__ == '__main__':
   main()
