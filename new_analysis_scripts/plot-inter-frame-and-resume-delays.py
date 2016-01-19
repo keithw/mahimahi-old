@@ -19,10 +19,10 @@ def get_cdf( unsorted_vals ):
     return (xvals, yvals)
 
 def main():
-    if len( sys.argv ) is not 3:
-        raise ValueError("Usage: python plot-inter-frame-delay.py inter-frame-delay-directory dataset-title")
+    if len( sys.argv ) is not 2:
+        raise ValueError("Usage: python plot-inter-frame-delay.py inter-frame-delay-directory")
     delay_logs_folder = sys.argv[1]
-    dataset_title = sys.argv[2]
+    _, dataset_title  = os.path.split(os.path.abspath(delay_logs_folder))
 
     inter_frame_delays_list = []
     resume_delays_list = []
@@ -40,7 +40,7 @@ def main():
                         inter_frame_delay = float(line)
                         inter_frame_delays_list.append(inter_frame_delay)
                         total_playback_time += inter_frame_delay
-                        if inter_frame_delay > .2:
+                        if inter_frame_delay > .1:
                             rebuffering_time += inter_frame_delay
                 rebuffering_ratios.append(rebuffering_time / total_playback_time)
 
