@@ -1,5 +1,6 @@
 from __future__ import print_function
 import os
+import shutil
 import sys
 import multiprocessing
 from multiprocessing import Pool
@@ -48,8 +49,9 @@ def main():
     logs_folder = sys.argv[1]
     output_directory = sys.argv[2]
     if os.path.exists(output_directory):
-        os.system("rm -rf " + output_directory)
-    os.system("mkdir " + output_directory)
+        print("Removing existing contents of " + output_directory)
+        shutil.rmtree(output_directory)
+    os.mkdir(output_directory)
 
     args_list = []
     for dirpath,_,filenames in os.walk(logs_folder):
@@ -59,7 +61,7 @@ def main():
             if match_object:
                 trial_id = match_object.group(1)
                 # TODO maybe don't delete existing directory here
-                os.system("mkdir " + output_directory + "/" + trial_id)
+                os.mkdir(output_directory + "/" + trial_id)
                 args_list.append((filepath, trial_id, output_directory))
 
     if len(args_list) is 0:
