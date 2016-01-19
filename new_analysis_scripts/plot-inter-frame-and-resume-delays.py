@@ -13,6 +13,11 @@ import pylab
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
  
+def get_cdf( unsorted_vals ):
+    xvals = np.sort( unsorted_vals )
+    yvals = (np.arange(len(xvals)) + 1)/float(len(xvals)) # range from 1 / len(xvals) to 1 inclusive
+    return (xvals, yvals)
+
 def main():
     if len( sys.argv ) is not 3:
         raise ValueError("Usage: python plot-inter-frame-delay.py inter-frame-delay-directory dataset-title")
@@ -35,7 +40,7 @@ def main():
                         inter_frame_delay = float(line)
                         inter_frame_delays_list.append(inter_frame_delay)
                         total_playback_time += inter_frame_delay
-                        if inter_frame_delay > .1:
+                        if inter_frame_delay > .2:
                             rebuffering_time += inter_frame_delay
                 rebuffering_ratios.append(rebuffering_time / total_playback_time)
 
@@ -46,11 +51,10 @@ def main():
                     for line in resume_delay_logfile:
                         resume_delays_list.append(float(line))
 
-    sorted_vals = np.sort( inter_frame_delays_list )
-    yvals = 1-(np.arange(len(sorted_vals))/float(len(sorted_vals)))
-    plt.plot( sorted_vals, yvals )
+    (xvals, yvals) = get_cdf( inter_frame_delays_list )
+    plt.plot( xvals, 1-yvals )
 
-    plt.title("CCDF of all inter-frame delays for " + dataset_title +" ("+ str(len(sorted_vals))+" datapoints)")
+    plt.title("CCDF of all inter-frame delays for " + dataset_title +" ("+ str(len(xvals))+" datapoints)")
     plt.xscale('log')
     plt.xlabel('Inter-frame delay (seconds)')
     plt.yscale('log')
@@ -59,21 +63,18 @@ def main():
     plt.savefig(filename)
     plt.clf()
 
-    sorted_vals = np.sort( resume_delays_list )
-    yvals = np.arange(len(sorted_vals))/float(len(sorted_vals))
-    plt.plot( sorted_vals, yvals )
-    plt.title("CDF of seek delays for " + dataset_title +" ("+ str(len(sorted_vals))+" datapoints)")
+    (xvals, yvals) = get_cdf( resume_delays_list )
+    plt.plot( xvals, yvals )
+    plt.title("CDF of seek delays for " + dataset_title +" ("+ str(len(xvals))+" datapoints)")
     plt.xlabel('Resume duration (seconds)')
     filename = dataset_title + "-resume-delays-cdf.pdf"
     print("Writing " + filename +"..")
     plt.savefig(filename)
     plt.clf()
 
-    sorted_vals = np.sort( rebuffering_ratios )
-    #TODO FIX yvals for all CDFs so it always ends with 1
-    yvals = np.arange(len(sorted_vals))/float(len(sorted_vals))
-    plt.plot( sorted_vals, yvals )
-    plt.title("CDF rebuffering ratios for " + dataset_title +" ("+ str(len(sorted_vals))+" runs)")
+    (xvals, yvals) = get_cdf( rebuffering_ratios )
+    plt.plot( xvals, yvals )
+    plt.title("CDF rebuffering ratios for " + dataset_title +" ("+ str(len(xvals))+" runs)")
     plt.xlabel('Rebuffering ratio')
     filename = dataset_title + "-rebuffering-ratios-cdf.pdf"
     print("Writing " + filename +"..")
