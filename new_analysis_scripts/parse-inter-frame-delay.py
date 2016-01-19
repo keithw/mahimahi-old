@@ -20,9 +20,11 @@ def get_inter_frame_delay((stall_logfilename, trial_id, output_directory)):
         first_render_time_of_last_frame = Decimal(0.0)
         time_in_video_of_last_frame = float(0)
 
+        no_lines_matched = True
         for line in stall_logfile:
             match_object = re.search("RENDER CALL ON: ([0-9]+(?:\.[0-9]+)?)s TIME: (.+)", line)
             if match_object:
+                no_lines_matched = False
                 if first_render_time_of_last_frame == 0: # very first render call
                     first_render_time_of_last_frame = Decimal(match_object.group(2))
                     time_in_video_of_last_frame = float(match_object.group(1))
@@ -41,7 +43,10 @@ def get_inter_frame_delay((stall_logfilename, trial_id, output_directory)):
                         time_in_video_of_last_frame = time_in_video_of_frame_rendered
 
 
-        print("Finished parsing " + trial_id)
+        if no_lines_matched:
+            raise Exception(stall_logfilename + " had no logged render calls")
+        else:
+            print("Finished parsing " + trial_id)
  
 def main():
     if len( sys.argv ) is not 3:
